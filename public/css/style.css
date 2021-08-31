@@ -56,9 +56,25 @@ body {
 }
 
 .location {
-  width: 100%;
   height: 3rem;
   background: #eaeaea;
+  display: flex;
+  box-shadow: inset 0 7px 9px -7px rgba(0, 0, 0, 0.4);
+  padding-left: 15rem;
+}
+.location__icon {
+  width: 3rem;
+  /*         background: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.location__name {
+  width: 10rem;
+  /*         background: blue; */
+  display: flex;
+  padding-left: 0.5rem;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
