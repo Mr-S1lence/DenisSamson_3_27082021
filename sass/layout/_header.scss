@@ -1,0 +1,28 @@
+.header{
+    background: $color-background-elements;
+    height: auto;
+    padding: 1.5rem 9rem;
+    display: flex;
+    justify-content: space-between;
+    &__logo{
+/*         background: red; */
+        text-align: center;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+            & img{
+                width: 300px;
+            }
+            & h2{
+                font-size:large;
+                margin: 0;
+            }
+    }
+    &__explorer{
+        width: 25%;
+/*         padding: 1rem 0rem; */
+/*         height: auto; */
+/*         background: blue; */
+        text-align: center;
+    }
+}
