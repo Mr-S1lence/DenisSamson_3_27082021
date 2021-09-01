@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     border-radius: 6rem;
-    box-shadow: 0px 12px 5px -6px rgba(0,0,0,0.17);
+    box-shadow: $box-shadow;
     &__explorer{
         justify-content: center;
         width: 12.5rem;

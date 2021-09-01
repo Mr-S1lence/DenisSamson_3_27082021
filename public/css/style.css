@@ -7,6 +7,15 @@ h2 {
   font-size: large;
 }
 
+h3 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .btn {
   display: flex;
   align-items: center;
@@ -116,11 +125,55 @@ h2 {
 .functioning {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 2rem;
   /*     background: blue; */
 }
 .functioning nav {
   display: flex;
+}
+
+.container {
+  /*     height: 60rem; */
+  background: #f6f6f6;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-gap: 2rem;
+}
+.container h2 {
+  grid-column: span 2;
+}
+
+.card {
+  width: 100%;
+  height: 35rem;
+  margin: auto;
+  background: white;
+  box-shadow: 0px 12px 5px -6px rgba(0, 0, 0, 0.17);
+  border-radius: 2rem;
+}
+.card__img {
+  height: 28rem;
+  overflow: hidden;
+}
+.card__img img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+.card__legend {
+  padding: 1.2rem 0 1.2rem 2rem;
+  font-size: x-large;
+}
+.card__legend p {
+  margin-top: 0.5rem;
+}
+
+.footer {
+  background: #353535;
+  height: 30rem;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
