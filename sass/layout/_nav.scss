@@ -1,3 +1,9 @@
 .functioning{
-    
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+/*     background: blue; */
+    & nav{
+        display: flex;
+    }
 }

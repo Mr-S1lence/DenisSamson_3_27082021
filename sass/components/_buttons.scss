@@ -1,16 +1,49 @@
 .btn{
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 12.5rem;
-    height: 3rem;
-    background: linear-gradient($color-secondary, $color-primary);
-    margin: auto;
     border-radius: 6rem;
-    color: white;
     box-shadow: 0px 12px 5px -6px rgba(0,0,0,0.17);
-    margin-bottom: 1rem;
+    &__explorer{
+        justify-content: center;
+        width: 12.5rem;
+        height: 3rem;
+        margin: auto;
+        margin-bottom: 1rem;
+        background: linear-gradient($color-secondary, $color-primary);
+        color: white;
+    }
+    &__functioning{
+        width: 14rem;
+        height: 3rem;
+        margin-left: 3rem;
+/*         background: red; */
+        background: $color-background-elements;
+        & .fas{
+            color: $color-icon;
+            margin-right: 1rem;
+        }
+        &:hover{
+            background: $color-hover;
+        }
+        &:hover .fas{
+            color: $color-primary;
+        }
+    }
     &:hover{
         cursor: pointer;
     }
+}
+
+.numbering{
+    position: absolute;
+    left: -0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 50%;
+    position: relative;
+    background: $color-primary;
+    color: white;
 }
