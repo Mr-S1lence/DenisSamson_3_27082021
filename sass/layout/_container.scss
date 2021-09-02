@@ -1,10 +1,12 @@
 .container{
 /*     height: 60rem; */
     background: $color-background-elements;
-    padding: $padding-section;
+    padding: 2rem;
+/*     5rem 1rem 5rem; */
+
     display: grid;
     grid-template-columns: repeat(2, 2fr);
-    grid-gap: 2rem;
+    row-gap: 2rem;
     & h2{
         grid-column: span 2;
     }

@@ -1,5 +1,19 @@
+@font-face{
+    font-family: 'roboto-regular';
+    src: url('../polices/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'shrikhand-regular';
+    src: url('../polices/Shrikhand/Shrikhand-Regular.ttf') format('truetype');
+}
+
+body{
+    font-family: roboto-regular;
+}
+
 h2{
-    font-size:large;
+    font-size:1.4rem;
 }
 
 h3{
@@ -9,4 +23,12 @@ h3{
 a{
     text-decoration: none;
     color: black;
+}
+
+p{
+    font-size: 1.3rem;
+}
+
+span, .fas{
+    font-size: 1.1rem;
 }

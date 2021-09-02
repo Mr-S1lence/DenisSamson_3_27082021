@@ -5,16 +5,16 @@
     box-shadow: $box-shadow;
     &__explorer{
         justify-content: center;
-        width: 12.5rem;
-        height: 3rem;
+        width: 16rem;
+        height: 3.5rem;
         margin: auto;
         margin-bottom: 1rem;
         background: linear-gradient($color-secondary, $color-primary);
         color: white;
     }
     &__functioning{
-        width: 14rem;
-        height: 3rem;
+        width: 17rem;
+        height: 4rem;
         margin-left: 3rem;
 /*         background: red; */
         background: $color-background-elements;
@@ -40,8 +40,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1.4rem;
-    height: 1.4rem;
+    width: 1.6rem;
+    height: 1.6rem;
     border-radius: 50%;
     position: relative;
     background: $color-primary;

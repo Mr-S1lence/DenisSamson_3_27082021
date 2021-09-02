@@ -1,0 +1,23 @@
+.footer{
+    background: $color-footer;
+    color: white;
+    padding: 1rem 16rem 1rem 16rem;
+    font-size: 1.8rem;
+    & a{
+        color: white;
+        display: flex;
+        margin: 0.7rem 0 0.7rem 0;
+    } 
+    & .fas{
+        color: white;   
+        min-width: 36px;
+        margin-right: 0.5rem;
+    }
+    & p{
+        margin: 0;
+    }
+}
+
+.logo-footer{
+    font-family: shrikhand-regular;
+}
