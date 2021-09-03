@@ -11,6 +11,10 @@
         margin-bottom: 1rem;
         background: linear-gradient($color-secondary, $color-primary);
         color: white;
+        &--command{
+            margin-right: 0;
+            margin-bottom: 0;
+        }
     }
     &__functioning{
         width: 17rem;

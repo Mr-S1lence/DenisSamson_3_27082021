@@ -19,7 +19,6 @@
     justify-content: end;
     align-items: center;
     width: 100%;
-    height: 60rem;
     background-image:url("../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
     background-repeat: no-repeat;
 /*     background-attachment: fixed; */
@@ -29,8 +28,8 @@
 }
 
 .menu{
-    width: 50rem;
-    height: 90rem;
+    width: 60rem;
+   /*  height: 90rem; */
     background: $color-background-elements;
     border-top-right-radius: 5rem;
     border-top-left-radius: 5rem;
@@ -38,14 +37,50 @@
     &__title{
         font-family: 'shrikhand-regular';
         font-size: 1.8rem;
-
-    }
-    &__board{
-        display: grid;
-        grid-template-columns: repeat(2, 2fr);
-        border: solid red 1px;
     }
 }
 
+.menu-board{
+/*     border: solid red 1px; */
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 4rem;
+    margin: 2rem;
+    &__part{
+/*         border: blue solid 1px; */
+    }
+    &__subtitle{
+        color: gray;
+    }
+    &__underline{
+        width: 3rem;
+        height: 3px;
+        margin-top: 2px;
+        background: #99e2d0;
+    }
+    &__subpart{
+        display: flex;
+        flex-direction: column;
+        background: white;
+        margin-top: 1rem;
+        border-radius: 1rem;
+        padding: 1rem;
+        box-shadow: $box-shadow;
+        & h3{
+            align-self: stretch;
+            font-size: 1.2rem;
+        }
+        & div{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        & p{
+            margin: 0.5rem 0 0.5rem 0;
+            font-size: 1rem;
+        }
 
+        }
+    }
+
+}
 
