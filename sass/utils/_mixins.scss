@@ -1,0 +1,35 @@
+@mixin mobile-only{
+    @media screen and (max-width : map-get($breakpoints, mobile)){
+        @content;
+    }
+}
+
+@mixin landscpate-mobile-only{
+    @media screen and (max-width : map-get($breakpoints, landscape-mobile)){
+        @content;
+    }
+}
+
+@mixin tablet-only{
+    @media screen and (max-width : map-get($breakpoints,tablet)){
+        @content;
+    }
+}
+
+@mixin landscape-tablet-only{
+    @media screen and (max-width : map-get($breakpoints, landscape-tablet-only)){
+        @content;
+    }
+}
+
+@mixin padding-header-footer-desktop{
+    padding: 1rem 25rem 1rem 25rem;
+}
+
+@mixin padding-desktop{
+    padding: 1rem 20rem 3rem 20rem;
+}
+
+@mixin margin-content{
+    margin: 0 5rem 0 5rem;
+}

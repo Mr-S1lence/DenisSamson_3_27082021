@@ -1,10 +1,12 @@
 .functioning{
     display: flex;
     flex-direction: column;
-    padding: 1rem 20rem 3rem 20rem;
+/*     padding: 1rem 20rem 3rem 20rem; */
+    @include padding-desktop;
     ;
 /*     background: blue; */
     & nav{
         display: flex;
+        @include margin-content;
     }
 }

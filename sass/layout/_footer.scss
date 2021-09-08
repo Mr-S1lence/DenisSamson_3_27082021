@@ -1,8 +1,19 @@
 .footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background: $color-footer;
     color: white;
-    padding: 1rem 20rem 1rem 20rem;
+/*     padding: 1rem 20rem 1rem 20rem; */
+    @include padding-header-footer-desktop;
     font-size: 1.8rem;
+    &:first-child{
+        align-self: stretch;
+        background: red;
+    }
+    &:last-child{
+        display: flex;
+    }
     & a{
         color: white;
         display: flex;

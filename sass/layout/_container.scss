@@ -1,15 +1,16 @@
-.container{
-/*     height: 60rem; */
+main{
+    @include padding-desktop;
     background: $color-background-elements;
-    padding: 1rem 20rem 1rem 20rem;
-/*     5rem 1rem 5rem; */
+}
 
+.container{
     display: grid;
     grid-template-columns: repeat(2, 2fr);
-    row-gap: 2rem;
-    & h2{
-        grid-column: span 2;
-    }
+/*     grid-auto-columns: min-content; */
+/*     justify-content: space-between;
+    align-content: space-between; */
+    @include margin-content;
+    grid-gap: 5rem;
 
 }
 
