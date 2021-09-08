@@ -5,14 +5,11 @@
     background: $color-footer;
     color: white;
 /*     padding: 1rem 20rem 1rem 20rem; */
-    @include padding-header-footer-desktop;
+    @include padding-desktop;
     font-size: 1.8rem;
-    &:first-child{
-        align-self: stretch;
-        background: red;
-    }
-    &:last-child{
+    & > :last-child{
         display: flex;
+        justify-content: space-between;
     }
     & a{
         color: white;
