@@ -26,6 +26,10 @@
             width: 18rem;
             height: 4rem;
         }
+        @include min-media("mobile-down"){
+            margin-right: 2rem;
+            height: 3rem;
+        }
         background: $color-background-elements;
         & .fas{
             color: $color-icon;

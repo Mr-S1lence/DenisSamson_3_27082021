@@ -107,6 +107,12 @@ body {
     height: 4rem;
   }
 }
+@media screen and (min-width: 499px) {
+  .btn__functioning {
+    margin-right: 2rem;
+    height: 3rem;
+  }
+}
 .btn__functioning .fas {
   color: #7e7e7e;
   margin-right: 1rem;
@@ -288,6 +294,11 @@ body {
     padding: 1rem 1rem 1rem 1rem;
   }
 }
+@media screen and (min-width: 499px) {
+  .functioning {
+    padding: 1rem 1rem 1rem 1rem;
+  }
+}
 .functioning nav {
   display: flex;
   margin: 0 5rem 2rem 5rem;
@@ -295,6 +306,11 @@ body {
 @media screen and (max-width: 420px) {
   .functioning nav {
     margin: auto 0rem auto 0rem;
+  }
+}
+@media screen and (min-width: 499px) {
+  .functioning nav {
+    margin: 0 2rem 2rem 2rem;
   }
 }
 @media screen and (max-width: 420px) {
@@ -318,6 +334,11 @@ main {
     padding: 1rem 1rem 1rem 1rem;
   }
 }
+@media screen and (min-width: 499px) {
+  main {
+    padding: 1rem 1rem 1rem 1rem;
+  }
+}
 
 .container {
   display: grid;
@@ -330,6 +351,11 @@ main {
 @media screen and (max-width: 420px) {
   .container {
     margin: auto 0rem auto 0rem;
+  }
+}
+@media screen and (min-width: 499px) {
+  .container {
+    margin: 0 2rem 2rem 2rem;
   }
 }
 @media screen and (max-width: 420px) {
@@ -472,6 +498,11 @@ main {
   }
 }
 @media screen and (max-width: 420px) {
+  .footer {
+    padding: 1rem 1rem 1rem 1rem;
+  }
+}
+@media screen and (min-width: 499px) {
   .footer {
     padding: 1rem 1rem 1rem 1rem;
   }
