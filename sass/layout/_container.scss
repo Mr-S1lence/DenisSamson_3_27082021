@@ -31,16 +31,35 @@ main{
 /*     background-attachment: fixed; */
     background-position: center; 
     background-size: 100% auto;
+    background-size: cover;
     padding-top: 5%;
+    @include max-media("mobile"){
+        background-repeat: no-repeat;
+        /*     background-attachment: fixed; */
+            background-position: unset; 
+            background-size: 100% auto;
+            padding-top: 0;
+            align-items: unset;
+    }
 }
 
 .menu{
-    width: 60rem;
+/*     width: 60rem; */
    /*  height: 90rem; */
     background: $color-background-elements;
     border-top-right-radius: 5rem;
     border-top-left-radius: 5rem;
     padding: 3rem;
+    @include max-media("mobile"){
+        margin-top: 12rem;
+        border-top-right-radius: 2rem;
+        border-top-left-radius: 2rem;
+        padding: 1rem;
+    }
+    @include min-media("mobile-down"){
+
+    }
+/*     margin-top: 3%; */
     &__title{
         font-family: 'shrikhand-regular';
         font-size: 1.8rem;
@@ -51,8 +70,18 @@ main{
 /*     border: solid red 1px; */
     display: grid;
     grid-template-columns: repeat(2, 2fr);
-    grid-gap: 4rem;
-    margin: 2rem;
+    grid-gap: 3rem;
+    margin: 1rem;
+    @include max-media("mobile"){
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+        margin: 0rem 0 0rem 0;
+    }
+    @include min-media("mobile-down"){
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+    }
+
     &__part{
 /*         border: blue solid 1px; */
     }
@@ -75,17 +104,19 @@ main{
         box-shadow: $box-shadow;
         & h3{
             align-self: stretch;
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
         & div{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-        & p{
-            margin: 0.5rem 0 0.5rem 0;
-            font-size: 1rem;
+        
+
         }
 
+        & p{
+            margin: 0.5rem 1rem 0rem 0;
+            font-size: 0.9rem;
         }
     }
 

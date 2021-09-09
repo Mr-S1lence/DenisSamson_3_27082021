@@ -15,6 +15,12 @@
         &--command{
             margin-right: 0;
             margin-bottom: 0;
+            @include max-media("mobile"){
+                margin: auto;
+            }
+            @include min-media("mobile-down"){
+                margin: auto;
+            }
         }
     }
     &__functioning{

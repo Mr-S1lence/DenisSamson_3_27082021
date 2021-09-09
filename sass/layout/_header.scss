@@ -16,7 +16,7 @@
         grid-template-columns:  1rem auto 15rem 20rem 1rem;
     }
     background: $color-background-elements;
-    margin-top: 1rem;
+    padding-top: 1rem;
     &__logo{
         grid-column: 2;   
         @include max-media("mobile"){
@@ -27,6 +27,9 @@
         display:flex;
         flex-direction: column;
         justify-content: center;
+            &--center{
+                grid-column: 2;
+            }
             & img{
                 width: 300px;
                 @include max-media("mobile"){
@@ -58,7 +61,20 @@
         text-align: center;
     }
     &--center{
-        justify-content: center;
+        grid-template-columns: 3fr 3fr 3fr;
+        padding: 1rem 15rem 1rem 15rem;
+        align-items: center;
+        text-align: center;
+        @include max-media("mobile"){
+            padding: 1rem 0rem 1rem 0rem;
+        }
+        @include min-media("mobile-down"){
+            padding: 1rem 0rem 1rem 0rem;
+        }
+    }
+    & fa-arrow-left{
+        grid-column: 1;
+/*         font-size: 10rem; */
     }
 }
 
