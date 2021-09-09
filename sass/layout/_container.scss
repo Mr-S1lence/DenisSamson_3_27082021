@@ -15,6 +15,9 @@ main{
         grid-row-gap: 1rem;
         margin-bottom: 3rem;;
     }
+    @include min-media("mobile-down"){
+        grid-gap: 2rem;
+    }
 }
 
 .container-restaurant{

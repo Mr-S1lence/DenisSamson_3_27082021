@@ -365,6 +365,11 @@ main {
     margin-bottom: 3rem;
   }
 }
+@media screen and (min-width: 499px) {
+  .container {
+    grid-gap: 2rem;
+  }
+}
 
 .container-restaurant {
   display: flex;
