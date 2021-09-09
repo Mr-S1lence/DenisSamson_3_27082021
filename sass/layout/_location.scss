@@ -5,6 +5,9 @@
 @include max-media("desktop"){
     padding-left: 22rem;
 }
+@include min-media("mobile-down"){
+    padding-left: 9.5rem;
+}
     @include max-media("mobile"){
         grid-column:1;
         grid-row: 2;

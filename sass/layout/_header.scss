@@ -8,6 +8,10 @@
         grid-template-columns:  1fr;
         padding-bottom: 2rem;
     }
+    @include min-media("mobile-down"){
+        grid-template-columns:  1rem auto 0rem 20rem 1rem;
+/*         background: red; */
+    }
     background: $color-background-elements;
     margin-top: 1rem;
     &__logo{

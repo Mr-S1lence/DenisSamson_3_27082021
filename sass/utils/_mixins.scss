@@ -29,13 +29,19 @@
     }
 }
 
-$margin-header: 30rem;
-$width-header-el: 18rem;
+@mixin min-media($key){
+    @media screen and (min-width: map-get($breakpoints, $key)){
+        @content;
+    }
+}
 
-@include max-media("desktop"){
+/* $margin-header: 30rem;
+$width-header-el: 18rem; */
+
+/* @include max-media("desktop"){
     $margin-header: 15rem;
     $width-header-el: 14rem;
-}
+} */
 
 @mixin padding-main{
     padding: 1rem 26rem 1rem 26rem;

@@ -22,6 +22,12 @@
     }
 }
  */
+/* $margin-header: 30rem;
+$width-header-el: 18rem; */
+/* @include max-media("desktop"){
+    $margin-header: 15rem;
+    $width-header-el: 14rem;
+} */
 @font-face {
   font-family: "roboto-regular";
   src: url("../polices/Roboto/Roboto-Regular.ttf") format("truetype");
@@ -152,6 +158,12 @@ body {
     padding-bottom: 2rem;
   }
 }
+@media screen and (min-width: 499px) {
+  .header {
+    grid-template-columns: 1rem auto 0rem 20rem 1rem;
+    /*         background: red; */
+  }
+}
 .header__logo {
   grid-column: 2;
   text-align: center;
@@ -225,6 +237,11 @@ body {
 @media screen and (max-width: 1440px) {
   .location {
     padding-left: 22rem;
+  }
+}
+@media screen and (min-width: 499px) {
+  .location {
+    padding-left: 9.5rem;
   }
 }
 @media screen and (max-width: 420px) {
