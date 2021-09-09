@@ -29,6 +29,17 @@
     }
 }
 
+$margin-header: 30rem;
+$width-header-el: 18rem;
+
+@include max-media("desktop"){
+    $margin-header: 15rem;
+    $width-header-el: 14rem;
+}
+
+
+
+/* 
 @mixin padding-header{
     padding: 1rem 30rem 1rem 30rem;
     @include max-media("desktop"){
@@ -37,7 +48,8 @@
     @include max-media("mobile"){
         padding: 1rem 1rem 1rem 1rem;
     }
-}
+} */
+
 
 @mixin padding-main{
     padding: 1rem 26rem 1rem 26rem;
