@@ -30,7 +30,7 @@
 }
 
 @mixin min-media($key){
-    @media screen and (min-width: map-get($breakpoints, $key)){
+    @media screen and (min-width: map-get($breakpoints, $key)) and (max-width: map-get($breakpoints, laptop-down)){
         @content;
     }
 }

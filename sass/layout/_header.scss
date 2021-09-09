@@ -12,6 +12,9 @@
         grid-template-columns:  1rem auto 0rem 20rem 1rem;
 /*         background: red; */
     }
+    @include min-media("laptop"){
+        grid-template-columns:  1rem auto 15rem 20rem 1rem;
+    }
     background: $color-background-elements;
     margin-top: 1rem;
     &__logo{

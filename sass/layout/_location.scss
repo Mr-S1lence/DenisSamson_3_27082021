@@ -8,6 +8,10 @@
 @include min-media("mobile-down"){
     padding-left: 9.5rem;
 }
+@include min-media("laptop"){
+    padding-left: 10.5rem;
+}
+
     @include max-media("mobile"){
         grid-column:1;
         grid-row: 2;

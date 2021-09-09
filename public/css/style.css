@@ -107,7 +107,7 @@ body {
     height: 4rem;
   }
 }
-@media screen and (min-width: 499px) {
+@media screen and (min-width: 499px) and (max-width: 1179px) {
   .btn__functioning {
     margin-right: 2rem;
     height: 3rem;
@@ -164,10 +164,15 @@ body {
     padding-bottom: 2rem;
   }
 }
-@media screen and (min-width: 499px) {
+@media screen and (min-width: 499px) and (max-width: 1179px) {
   .header {
     grid-template-columns: 1rem auto 0rem 20rem 1rem;
     /*         background: red; */
+  }
+}
+@media screen and (min-width: 1023px) and (max-width: 1179px) {
+  .header {
+    grid-template-columns: 1rem auto 15rem 20rem 1rem;
   }
 }
 .header__logo {
@@ -245,9 +250,14 @@ body {
     padding-left: 22rem;
   }
 }
-@media screen and (min-width: 499px) {
+@media screen and (min-width: 499px) and (max-width: 1179px) {
   .location {
     padding-left: 9.5rem;
+  }
+}
+@media screen and (min-width: 1023px) and (max-width: 1179px) {
+  .location {
+    padding-left: 10.5rem;
   }
 }
 @media screen and (max-width: 420px) {
@@ -294,7 +304,7 @@ body {
     padding: 1rem 1rem 1rem 1rem;
   }
 }
-@media screen and (min-width: 499px) {
+@media screen and (min-width: 499px) and (max-width: 1179px) {
   .functioning {
     padding: 1rem 1rem 1rem 1rem;
   }
@@ -308,7 +318,7 @@ body {
     margin: auto 0rem auto 0rem;
   }
 }
-@media screen and (min-width: 499px) {
+@media screen and (min-width: 499px) and (max-width: 1179px) {
   .functioning nav {
     margin: 0 2rem 2rem 2rem;
   }
@@ -334,7 +344,7 @@ main {
     padding: 1rem 1rem 1rem 1rem;
   }
 }
-@media screen and (min-width: 499px) {
+@media screen and (min-width: 499px) and (max-width: 1179px) {
   main {
     padding: 1rem 1rem 1rem 1rem;
   }
@@ -353,7 +363,7 @@ main {
     margin: auto 0rem auto 0rem;
   }
 }
-@media screen and (min-width: 499px) {
+@media screen and (min-width: 499px) and (max-width: 1179px) {
   .container {
     margin: 0 2rem 2rem 2rem;
   }
@@ -365,7 +375,7 @@ main {
     margin-bottom: 3rem;
   }
 }
-@media screen and (min-width: 499px) {
+@media screen and (min-width: 499px) and (max-width: 1179px) {
   .container {
     grid-gap: 2rem;
   }
@@ -507,7 +517,7 @@ main {
     padding: 1rem 1rem 1rem 1rem;
   }
 }
-@media screen and (min-width: 499px) {
+@media screen and (min-width: 499px) and (max-width: 1179px) {
   .footer {
     padding: 1rem 1rem 1rem 1rem;
   }
