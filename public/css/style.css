@@ -33,12 +33,19 @@
 body {
   font-family: roboto-regular;
 }
+@media screen and (max-width: 420px) {
+  body {
+    font-size: 4vw;
+  }
+}
 
 h2 {
-  font-size: 1.5rem;
+  /*     font-size:1.5rem; */
+  font-size: 1.3rem;
 }
 
 h3 {
+  font-size: 1rem;
   margin: 0;
 }
 
@@ -48,11 +55,13 @@ a {
 }
 
 p {
-  font-size: 1.3rem;
+  /*     font-size: 1.3rem; */
+  font-size: 0.9rem;
 }
 
 span, .fas {
-  font-size: 1.1rem;
+  /*     font-size: 1.1rem; */
+  font-size: 0.9rem;
 }
 
 body {
@@ -68,8 +77,8 @@ body {
 }
 .btn__explorer {
   justify-content: center;
-  width: 16rem;
-  height: 3.5rem;
+  width: 12rem;
+  height: 2.5rem;
   margin: auto;
   margin-bottom: 1rem;
   background: linear-gradient(#FF79DA, #9356DC);
@@ -80,8 +89,8 @@ body {
   margin-bottom: 0;
 }
 .btn__functioning {
-  width: 17rem;
-  height: 4rem;
+  width: 14rem;
+  height: 2.5rem;
   margin-right: 3rem;
   /*         background: red; */
   background: #f6f6f6;
@@ -123,7 +132,7 @@ body {
 .header {
   background: #f6f6f6;
   height: auto;
-  padding: 1rem 25rem 1rem 25rem;
+  padding: 1rem 30rem 1rem 30rem;
   display: flex;
   justify-content: space-between;
 }
@@ -156,7 +165,7 @@ body {
   margin: 0;
 }
 .header__explorer {
-  width: 35%;
+  width: 30%;
   text-align: center;
 }
 .header--center {
@@ -176,7 +185,7 @@ body {
   background: #eaeaea;
   display: flex;
   box-shadow: inset 0 7px 9px -7px rgba(0, 0, 0, 0.4);
-  padding-left: 30rem;
+  padding-left: 32rem;
 }
 @media screen and (max-width: 1440px) {
   .location {
@@ -202,7 +211,7 @@ body {
   display: flex;
   flex-direction: column;
   /*     padding: 1rem 20rem 3rem 20rem; */
-  padding: 1rem 20rem 1rem 20rem;
+  padding: 1rem 26rem 1rem 26rem;
   /*     background: blue; */
 }
 @media screen and (max-width: 1440px) {
@@ -216,7 +225,7 @@ body {
 }
 
 main {
-  padding: 1rem 20rem 1rem 20rem;
+  padding: 1rem 26rem 1rem 26rem;
   background: #f6f6f6;
 }
 @media screen and (max-width: 1440px) {
@@ -232,7 +241,10 @@ main {
   /*     justify-content: space-between;
       align-content: space-between; */
   margin: 0 5rem 2rem 5rem;
-  grid-gap: 5rem;
+  margin-top: 2rem;
+  /*     grid-gap: 7rem; */
+  grid-column-gap: 6rem;
+  grid-row-gap: 5rem;
 }
 
 .container-restaurant {
@@ -314,18 +326,26 @@ main {
   /*     margin-bottom: 3rem; */
 }
 .card__img {
-  height: 20rem;
+  position: relative;
+  /*         display: table; */
+  height: 14rem;
   overflow: hidden;
-}
-.card__img img {
-  width: 100%;
-  height: auto;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
+  /*         vertical-align: middle; */
+}
+.card__img img {
+  position: absolute;
+  /*             display: table-cell; */
+  /*             vertical-align: middle;
+              text-align: center; */
+  top: -25%;
+  width: 100%;
+  height: 125%;
   object-fit: cover;
 }
 .card__legend {
-  padding: 1.2rem 0 1.2rem 2rem;
+  padding: 1rem 0 0rem 2rem;
   font-size: 1.3rem;
 }
 .card__legend p {
@@ -339,7 +359,7 @@ main {
   background: #353535;
   color: white;
   /*     padding: 1rem 20rem 1rem 20rem; */
-  padding: 1rem 20rem 1rem 20rem;
+  padding: 1rem 26rem 1rem 26rem;
   font-size: 1.8rem;
 }
 @media screen and (max-width: 1440px) {

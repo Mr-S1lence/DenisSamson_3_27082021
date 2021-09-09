@@ -10,7 +10,10 @@ main{
 /*     justify-content: space-between;
     align-content: space-between; */
     @include margin-content;
-    grid-gap: 5rem;
+    margin-top: 2rem;
+/*     grid-gap: 7rem; */
+    grid-column-gap: 6rem;
+    grid-row-gap: 5rem;
 
 }
 

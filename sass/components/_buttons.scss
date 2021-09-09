@@ -5,8 +5,8 @@
     box-shadow: $box-shadow;
     &__explorer{
         justify-content: center;
-        width: 16rem;
-        height: 3.5rem;
+        width: 12rem;
+        height: 2.5rem;
         margin: auto;
         margin-bottom: 1rem;
         background: linear-gradient($color-secondary, $color-primary);
@@ -17,8 +17,8 @@
         }
     }
     &__functioning{
-        width: 17rem;
-        height: 4rem;
+        width: 14rem;
+        height: 2.5rem;
         margin-right: 3rem;
 /*         background: red; */
         background: $color-background-elements;

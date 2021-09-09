@@ -30,14 +30,14 @@
 }
 
 @mixin padding-header{
-    padding: 1rem 25rem 1rem 25rem;
+    padding: 1rem 30rem 1rem 30rem;
     @include max-media("desktop"){
         padding: 1rem 5rem 1rem 5rem;
     }
 }
 
 @mixin padding-main{
-    padding: 1rem 20rem 1rem 20rem;
+    padding: 1rem 26rem 1rem 26rem;
     @include max-media("desktop"){
         padding: 1rem 1rem 1rem 1rem;
     }

@@ -10,13 +10,18 @@
 
 body{
     font-family: roboto-regular;
+    @include max-media("mobile"){
+        font-size: 4vw;
+    }
 }
 
 h2{
-    font-size:1.5rem;
+/*     font-size:1.5rem; */
+font-size: 1.3rem;
 }
 
 h3{
+        font-size: 1rem;
     margin: 0;
 }
 
@@ -26,9 +31,11 @@ a{
 }
 
 p{
-    font-size: 1.3rem;
+/*     font-size: 1.3rem; */
+    font-size: 0.9rem;
 }
 
 span, .fas{
-    font-size: 1.1rem;
+/*     font-size: 1.1rem; */
+    font-size: 0.9rem;
 }
