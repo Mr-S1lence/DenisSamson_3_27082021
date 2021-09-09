@@ -10,11 +10,18 @@
     & > :last-child{
         display: flex;
         justify-content: space-between;
+        @include max-media("mobile"){
+            flex-direction: column;
+            justify-content: start;
+        }
     }
     & a{
         color: white;
         display: flex;
         margin: 0.7rem 0 0.7rem 0;
+        @include max-media("mobile"){
+            margin: 0.4rem 0 0.4rem 0;
+        }
     } 
     & .fas{
         color: white;   
