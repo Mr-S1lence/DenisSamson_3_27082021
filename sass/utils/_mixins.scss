@@ -32,17 +32,26 @@
 @mixin padding-header{
     padding: 1rem 30rem 1rem 30rem;
     @include max-media("desktop"){
-        padding: 1rem 5rem 1rem 5rem;
+        padding: 1rem 15rem 1rem 15rem;
+    }
+    @include max-media("mobile"){
+        padding: 1rem 1rem 1rem 1rem;
     }
 }
 
 @mixin padding-main{
     padding: 1rem 26rem 1rem 26rem;
     @include max-media("desktop"){
+        padding: 1rem 10rem 1rem 10rem;
+    }
+        @include max-media("mobile"){
         padding: 1rem 1rem 1rem 1rem;
     }
 }
 
 @mixin margin-content{
     margin: 0 5rem 2rem 5rem;
+/*     @include max-media("desktop"){
+        margin: 0 15rem 2rem 15rem;
+    } */
 }
