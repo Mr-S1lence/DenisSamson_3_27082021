@@ -6,15 +6,14 @@ main{
 .container{
     display: grid;
     grid-template-columns: repeat(2, 2fr);
-/*     grid-auto-columns: min-content; */
-/*     justify-content: space-between;
-    align-content: space-between; */
     @include margin-content;
     margin-top: 2rem;
-/*     grid-gap: 7rem; */
     grid-column-gap: 6rem;
     grid-row-gap: 5rem;
-
+    @include max-media("mobile"){
+        grid-template-columns: 1fr;
+        grid-row-gap: 1rem;
+    }
 }
 
 .container-restaurant{
