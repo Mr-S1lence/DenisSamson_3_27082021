@@ -22,16 +22,6 @@
     }
 }
  */
-/* 
-@mixin padding-header{
-    padding: 1rem 30rem 1rem 30rem;
-    @include max-media("desktop"){
-        padding: 1rem 15rem 1rem 15rem;
-    }
-    @include max-media("mobile"){
-        padding: 1rem 1rem 1rem 1rem;
-    }
-} */
 @font-face {
   font-family: "roboto-regular";
   src: url("../polices/Roboto/Roboto-Regular.ttf") format("truetype");
@@ -84,11 +74,11 @@ body {
   align-items: center;
   border-radius: 6rem;
   box-shadow: 0px 12px 5px -6px rgba(0, 0, 0, 0.17);
+  height: 2.5rem;
 }
 .btn__explorer {
   justify-content: center;
   width: 12rem;
-  height: 2.5rem;
   margin: auto;
   margin-bottom: 1rem;
   background: linear-gradient(#FF79DA, #9356DC);
@@ -100,10 +90,16 @@ body {
 }
 .btn__functioning {
   width: 14rem;
-  height: 2.5rem;
   margin-right: 3rem;
-  /*         background: red; */
   background: #f6f6f6;
+}
+@media screen and (max-width: 420px) {
+  .btn__functioning {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    width: 18rem;
+    height: 4rem;
+  }
 }
 .btn__functioning .fas {
   color: #7e7e7e;
@@ -153,6 +149,7 @@ body {
 @media screen and (max-width: 420px) {
   .header {
     grid-template-columns: 1fr;
+    padding-bottom: 2rem;
   }
 }
 .header__logo {
@@ -218,7 +215,7 @@ body {
 .location {
   grid-row: 3;
   grid-column: span 5;
-  /*     padding-left: 37rem; */
+  padding-left: 37rem;
   height: 3rem;
   margin-top: 1rem;
   background: #eaeaea;
@@ -236,6 +233,7 @@ body {
     grid-row: 2;
     padding-left: 0;
     justify-content: center;
+    margin-bottom: 2rem;
   }
 }
 .location > div {
@@ -276,9 +274,17 @@ body {
 .functioning nav {
   display: flex;
   margin: 0 5rem 2rem 5rem;
-  /*     @include max-media("desktop"){
-          margin: 0 15rem 2rem 15rem;
-      } */
+}
+@media screen and (max-width: 420px) {
+  .functioning nav {
+    margin: auto 0rem auto 0rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  .functioning nav {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 main {
@@ -303,13 +309,15 @@ main {
   /*     justify-content: space-between;
       align-content: space-between; */
   margin: 0 5rem 2rem 5rem;
-  /*     @include max-media("desktop"){
-          margin: 0 15rem 2rem 15rem;
-      } */
   margin-top: 2rem;
   /*     grid-gap: 7rem; */
   grid-column-gap: 6rem;
   grid-row-gap: 5rem;
+}
+@media screen and (max-width: 420px) {
+  .container {
+    margin: auto 0rem auto 0rem;
+  }
 }
 
 .container-restaurant {

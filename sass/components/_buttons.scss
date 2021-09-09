@@ -3,10 +3,11 @@
     align-items: center;
     border-radius: 6rem;
     box-shadow: $box-shadow;
+    height: 2.5rem;
     &__explorer{
         justify-content: center;
         width: 12rem;
-        height: 2.5rem;
+        
         margin: auto;
         margin-bottom: 1rem;
         background: linear-gradient($color-secondary, $color-primary);
@@ -18,9 +19,13 @@
     }
     &__functioning{
         width: 14rem;
-        height: 2.5rem;
         margin-right: 3rem;
-/*         background: red; */
+        @include max-media("mobile"){
+            margin-right: 0;
+            margin-bottom: 1rem;
+            width: 18rem;
+            height: 4rem;
+        }
         background: $color-background-elements;
         & .fas{
             color: $color-icon;
