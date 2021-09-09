@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
 /*     padding: 1rem 20rem 3rem 20rem; */
-    @include padding-desktop;
+    @include padding-main;
     ;
 /*     background: blue; */
     & nav{

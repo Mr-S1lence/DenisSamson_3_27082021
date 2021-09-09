@@ -4,6 +4,9 @@
     display: flex;
     box-shadow: inset 0 7px 9px -7px rgba(0,0,0,0.4);
     padding-left: 30rem;
+    @include max-media("desktop"){
+        padding-left: 10rem;
+    }
     &__icon{
         width: 3rem;
 /*         background: red; */

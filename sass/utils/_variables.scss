@@ -17,7 +17,12 @@ $box-shadow: 0px 12px 5px -6px rgba(0,0,0,0.17);
 
 $breakpoints: (
     mobile: 420px,
-    landscape-mobile : 767px,
-    tablet: 1023px,
-    landscape-tablet: 1365px
+    mobile-down: 499px,
+    tablet: 767px,
+    tablet-down: 899px,
+    laptop: 1023px,
+    laptop-down: 1179px,
+    desktop: 1440px
 );
+
+

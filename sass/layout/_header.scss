@@ -1,9 +1,12 @@
 .header{
     background: $color-background-elements;
     height: auto;
-    @include padding-header-footer-desktop;
+    @include padding-header;
     display: flex;
     justify-content: space-between;
+    @include max-media("mobile"){
+        flex-direction: column;
+    }
     &__logo{
 /*         background: red; */
         text-align: center;
@@ -12,6 +15,9 @@
         justify-content: center;
             & img{
                 width: 300px;
+                @include max-media("mobile"){
+                    width: 150px;
+                }
             }
             & h2{
                 margin: 0;
@@ -25,3 +31,12 @@
         justify-content: center;
     }
 }
+
+/* @media only screen and (max-width: map-get($breakpoints , desktop )){
+    
+    .header{
+        padding: 1rem 5rem 1rem 5rem; 
+        background: red;
+    }
+
+} */
