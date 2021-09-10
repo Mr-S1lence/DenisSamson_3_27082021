@@ -55,6 +55,11 @@ h3 {
   margin: 0;
 }
 
+h4 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -460,13 +465,16 @@ main {
   font-family: "shrikhand-regular";
   font-size: 1.8rem;
 }
+.menu__title h3 {
+  font-size: 1.6rem;
+}
 
 .menu-board {
   /*     border: solid red 1px; */
   display: grid;
   grid-template-columns: repeat(2, 2fr);
   grid-gap: 3rem;
-  margin: 1rem;
+  margin: 3rem 1rem 3rem 1rem;
 }
 @media screen and (max-width: 420px) {
   .menu-board {
