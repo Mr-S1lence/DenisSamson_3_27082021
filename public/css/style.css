@@ -1214,7 +1214,7 @@ main {
 @media screen and (max-width: 420px) {
   .card__legend {
     margin-top: -1rem;
-    padding: 0 0 0 2rem;
+    padding: 0 2rem 0 2rem;
   }
 }
 .card__legend p {
