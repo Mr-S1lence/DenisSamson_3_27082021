@@ -1,0 +1,619 @@
+.loader_container{
+    width: 40rem;
+    height: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid red 1px;
+    padding: 5rem;
+}
+
+
+
+.loader{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+/*     linear-gradient($color-secondary, $color-primary) */
+    border: solid 6px $color-primary;
+    border-top: solid 6px $color-secondary;
+    border-radius: 50%;
+    animation: test 0.2s cubic-bezier(.99,.16,.25,1.01) infinite;
+    animation: color 
+    & span{
+        position: absolute;
+    }
+}
+
+.loader_text{
+    position: absolute;
+    font-size: 0.5rem;
+/*     z-index: -1; */
+}
+
+@keyframes test {
+/*     from{
+        opacity: 0.5;
+    } */
+    to{ 
+        opacity: 1;
+        transform: rotate(360deg)
+    }
+
+}
+
+
+
+
+.trapeze{
+	width:1px;
+	height:100px;
+	border:1px solid black;
+	border-color:transparent transparent transparent #069;
+	border-width:100px;
+}
+
+
+/* ===================================================================================== */
+
+
+.container-trapeze{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 164px;
+    height: 164px;
+    margin: auto;
+/*     transform: rotate(90deg); */
+      animation: sablier-rotate 0.5s cubic-bezier(.99,.16,.25,1.01) /*  <<<<<<<<<<<<================================== */
+    forwards
+    ; 
+}
+
+
+.container-trapeze-center{
+    width: 4px;
+    height: 2px;
+    border-left: solid $color-secondary 3px;
+    border-right: solid $color-secondary 3px;
+    background: white;
+}
+
+.container-relative-sablier{
+/*     box-sizing: border-box; */
+    position: relative;
+    width: 100px;
+    height:80px;
+}
+
+
+.sablier{
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 50px;
+    transform: translateX(-50%);
+    height: 0;
+    width: 10px;
+    border-bottom: 80px solid $color-secondary;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom-left-radius: 35%;
+    border-bottom-right-radius: 35%;
+/*     border-bottom-color: linear-gradient($color-primary, $color-secondary); */
+
+
+
+    &--haut{
+        top: 0;
+        left: -5px;
+        transform: rotate(180deg);
+
+    }
+   } 
+
+   .contenair-relative-sablier-in{
+    position: relative;
+    width: 100px; /* somme de width, border-left et right de sable-in--haut */
+    height:80px;
+    margin: auto;
+   }
+
+/*    .contenair-relative-sablier-in-up{
+   } */
+
+   .sablier_in{
+/*     box-sizing: content-box; */
+    position: absolute;
+    z-index: -1;
+    bottom: 5px;
+    height: 0;
+    width: 4px;
+    right: 0;
+    border-bottom: 50px solid $color-primary;     
+    border-left: 48px solid transparent;
+    border-right: 48px solid transparent;
+    border-bottom-left-radius: 35%;
+    border-bottom-right-radius: 35%;
+
+
+
+/*     right: 0px;
+left: unset;
+border-bottom: 73px solid $color-secondary;
+border-left: 22px solid transparent;
+border-right: 46px solid transparent; */
+
+
+
+
+    transform-origin: top;
+    animation: tombe 1.20s  forwards;  /*  <<<<<<<<<<<<================================== */
+
+      &--haut{
+        position: absolute;
+        z-index: 1;
+        top: 5px;
+        height: 0px;
+        width: 4px;
+        border-top: 50px solid $color-primary;
+        border-left: 48px solid transparent;
+        border-right: 48px solid transparent;
+        border-top-left-radius: 35%;
+        border-top-right-radius: 35%;
+        transform: scale(0);
+        transform-origin: top;           /*  <<<<<<<<<<<<================================== */
+        animation: remplissage 0.80s 0.40s    
+        forwards
+        ;
+    }    
+   }
+
+.coule2{
+    z-index: 3;
+    position: absolute;
+    background: $color-primary;
+    top: 5px;
+    width: 2px;
+    height: 83px;
+    margin-left: 49px;
+
+    transform: scale(0);
+    animation: coule2 0.90s 0.38s forwards;      /*  <<<<<<<<<<<<================================== */
+}
+
+
+
+@keyframes sablier-rotate {
+    to{
+        transform: rotate(180deg);
+    }
+}
+
+
+/*  @keyframes tombe { */  /* right  -20  20px 20px -20  left */
+/* 15%{
+    right: 2px;
+    left: unset;
+    border-bottom: 73px solid $color-secondary;
+    border-left: 22px solid transparent;
+    border-right: 46px solid transparent;
+}30%{
+    right: 3px;
+    left: unset;
+    border-bottom: 73px solid $color-secondary;
+
+    border-left: 46px solid transparent;
+    transform: scale(0.80, 1);
+
+
+}35%{
+    right: unset; 
+    left: 1px;  
+    border-bottom: 73px solid $color-secondary;
+    border-left: 46px solid transparent;
+
+}40%{
+    right: unset; 
+    left: 2px;  
+    border-left: 46px solid transparent;
+    border-right: 38px solid transparent; 
+    bottom: unset;
+    top: 5px;
+    
+ }65%{
+  
+    right: unset; 
+    left: 0px;  
+
+    bottom: unset;
+    top: 0px;
+
+    border-bottom: 60px solid $color-secondary;     
+    border-left: 48px solid transparent;
+    border-right: 48px solid transparent; 
+
+ }100%{
+        transform:scale(0);
+        right: unset; 
+        left: unset;  
+    
+        bottom: unset;
+        top: 0px;
+    
+        border-bottom: 50px solid $color-secondary;     
+        border-left: 48px solid transparent;
+        border-right: 48px solid transparent;     
+}
+
+ }
+ */
+/* @keyframes tombe {
+    20%{
+        right: 0px;
+        left: unset;
+        border-bottom: 73px solid $color-secondary;
+        border-left: 22px solid transparent;
+        border-right: 46px solid transparent;
+    }
+    30%{
+        border-bottom: 50px solid $color-secondary;     
+        border-left: 48px solid transparent;
+        border-right: 48px solid transparent; 
+        transform: translateY(0) scale(1, 1);
+    }
+    35%{ 
+        transform: translateY(-25px) scale(0.65, 1); 
+    }100%{
+        transform: translateY(-25px) scale(0);
+    }  
+} */
+
+/* px = height contenaire  - border-bottom.sable-in - bottom position.sable-in  */
+@keyframes tombe {
+    20%{
+        right: 0px;
+        left: unset;
+        border-bottom: 73px solid $color-primary;
+        border-left: 22px solid transparent;
+        border-right: 46px solid transparent;
+    }
+    30%{
+        
+        border-bottom: 60px solid $color-primary;     
+        border-left: 48px solid transparent;
+        border-right: 48px solid transparent; 
+        transform: translateY(0) scale(1, 1);
+    }
+    35%{ 
+        transform: translateY(-18px) scale(0.75, 1); 
+    }100%{
+        transform: translateY(-18px) scale(0);
+    }  
+} 
+
+/* @keyframes tombe {
+    20%{
+        right: 0px;
+        left: unset;
+        border-bottom: 73px solid $color-secondary;
+        border-left: 22px solid transparent;
+        border-right: 46px solid transparent;
+    }
+    30%{
+        border-bottom: 50px solid $color-secondary;     
+        border-left: 48px solid transparent;
+        border-right: 48px solid transparent; 
+        transform: translateY(0) scale(1, 1);
+    }
+    35%{ 
+        transform: translateY(-25px) scale(0.65, 1); 
+    }100%{
+        transform: translateY(-25px) scale(0);
+    }  
+}  */
+
+
+
+
+
+
+@keyframes remplissage{
+    0%{
+        transform: scale(0);
+    }100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes coule2{
+    0%{
+        transform-origin: bottom;
+        transform: scaleY(0);
+    }10%{
+        transform-origin: bottom;
+        transform: scaleY(1);
+    }70%{
+        transform-origin: top;
+        transform: scaleY(1);
+    }100%{
+        transform-origin: top;
+        transform: scaleY(0);
+    } 
+}
+
+   
+/* ===============PROGRESS BAR=========================================================================== */
+
+.btn_progress{
+    width: 10rem;
+    height:3rem;
+    border: solid 1px black;
+    background: lime;
+    margin: 2rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:active {
+        & + .progress {
+            & > .progress__bar {
+/*                     transform: scaleX(1); */
+                    animation-name: progress-bar;
+                    animation-duration: 1000ms;
+                    animation-fill-mode: forwards;
+                    transform-origin: bottom;
+                }
+            }
+        }
+}
+
+
+@keyframes progress-bar{
+    0%{
+        transform: scaleY(0);
+        
+    }
+    100%{
+        transform: scaleY(0.5);
+    }
+}
+
+
+.progress{
+    height: 80rem;
+    width: 20rem;
+    border: solid 2px white;
+
+    box-shadow: 0px 0px 0px 1px #000000;
+    &__bar {
+        height: 40rem;
+        width: 20rem;
+        background: lime;
+        transform: scaleY(0);
+/*         transition: transform 2000ms;
+        transform-origin: bottom;
+        transition: transform 1000ms cubic-bezier(.32,0,.07,1); */
+    }
+
+}
+
+/* =============TEST================================================================== */
+
+.sablier_in2{
+    /*     box-sizing: content-box; */
+        position: absolute;
+        z-index: -1;
+    /*     top: 18px; */
+        bottom: 5px;
+    /*     left: 2px; */
+        transform-origin: bottom;
+        transform: scaleY(0);
+    /*     transform: translateX(-50%); */
+        height: 0;
+        width: 4px;
+        border-bottom: 80px solid $color-secondary;
+        border-left: 48px solid transparent;
+        border-right: 48px solid transparent;
+        border-bottom-left-radius: 35%;
+        border-bottom-right-radius: 35%;
+    /*     background:red; */
+        animation: coule 1s 
+        forwards
+        ;
+    
+        &--haut{
+            position: absolute;
+            z-index: -1;
+            bottom: 5px;
+            top: 0;
+            left: 0;
+            height: 0;
+            width: 4px;
+            border-top: 80px solid $color-secondary;
+            border-left: 48px solid transparent;
+            border-right: 48px solid transparent;
+            border-top-left-radius: 35%;
+            border-top-right-radius: 35%;
+/*             transform: rotate(180deg); */
+    /*         transform: scaleY(-1); */
+        }       
+       }
+
+
+/* =========HEART=========================================================================================        */
+
+.container-heart{
+    width: 50%;
+    height: 50%;
+    position: relative;
+    margin: auto;
+    border: solid black 1px;
+/*     transform: rotate(45deg); */
+&:hover{
+    cursor: pointer;
+    & .youhou{
+    animation: heart 0.9s forwards;
+    
+}
+& .youhou2{
+    animation: heart2 0.9s  forwards;
+    
+}
+
+& .youhou3{
+    animation: heart3 0.9s  forwards;
+    
+}
+
+}
+}
+
+
+
+.heart-test{
+    position: absolute;
+    z-index: -1;
+    left: 70px;
+
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: white;
+    border: black solid 4px;
+/*     border-right: black solid 5px;
+    border-left: black solid 5px; */
+
+}
+
+.heart__background{
+    position: absolute;
+    z-index: 3;
+    top: 3px;
+    left: 73px;
+    width: 81px;
+    height: 81px;
+    border-radius: 50%;
+    background-color: $color-primary;
+    transform: scaleY(0);
+}
+
+.heart2{
+    position: absolute;
+    z-index: -1;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: white;
+    border: black solid 4px;
+/*     border-left: black solid 5px; */
+/*     border-right: black solid 5px; */
+
+}
+
+.heart__background2{
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    z-index: 3;
+    width: 81px;
+    height: 81px;
+    border-radius: 50%;
+    background-color: $color-primary;
+    transform: scaleY(0);
+
+}
+
+.heart3{
+    top: 40px;
+    left: 37px;
+    position: absolute;
+    z-index: -1;
+    width: 80px;
+    height: 80px; 
+    border-bottom: black solid 4px;
+    border-right: black solid 4px;
+    background: white;
+    transform: rotate(45deg);
+}
+
+.heart__background3{
+    top: 38px;
+    left: 38px;
+    position: absolute;
+    z-index: 3;
+    width: 81px;
+    height: 81px; 
+
+    background: -moz-linear-gradient(
+/*         to right bottom,  */
+        135deg,
+        $color-secondary,
+        $color-primary 50%
+        );
+
+    transform: rotate(45deg) scaleY(0); 
+}
+
+
+
+@keyframes heart{
+    0%{
+/*         transform: scale(0) */
+/* transform-origin: bottom right;
+transform: translate(-40px, 17px) rotate(45deg) scale(0); */
+transform-origin:  center;
+transform:  rotate(45deg) scale(0);
+
+    }
+    100%{
+/*         transform: scale(1) */
+/* transform-origin: bottom right;
+transform: translate(-40px, 17px) rotate(45deg) scale(1); */
+transform-origin: center;
+transform:  rotate(45deg) scale(1);
+    }
+}
+
+
+@keyframes heart3{
+    0%{
+/*         transform: scale(0) */
+transform-origin: bottom right;
+transform:  scale(0);
+
+    }
+    100%{
+/*         transform: scale(1) */
+transform-origin: bottom right;
+transform:  scale(1);
+    }
+}
+
+@keyframes heart2{
+    0%{
+/*         transform: scale(0) */
+transform-origin: bottom left;
+transform:  scale(0);
+
+    }
+    100%{
+/*         transform: scale(1) */
+transform-origin: bottom left;
+transform:  scale(1);
+    }
+}
+
