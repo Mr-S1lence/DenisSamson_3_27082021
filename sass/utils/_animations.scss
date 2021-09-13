@@ -463,23 +463,23 @@ border-right: 46px solid transparent; */
     margin: auto;
     border: solid black 1px;
 /*     transform: rotate(45deg); */
-&:hover{
-    cursor: pointer;
-    & .youhou{
-    animation: heart 0.9s forwards;
-    
-}
-& .youhou2{
-    animation: heart2 0.9s  forwards;
-    
-}
+    &:hover{
+        cursor: pointer;
+        & .youhou{
+        animation: heart 0.9s forwards;
+        
+        }
+        & .youhou2{
+            animation: heart2 0.9s  forwards;
+            
+        }
 
-& .youhou3{
-    animation: heart3 0.9s  forwards;
-    
-}
+        & .youhou3{
+            animation: heart3 0.9s  forwards;
+            
+        }
 
-}
+    }
 }
 
 
@@ -513,10 +513,12 @@ border-right: 46px solid transparent; */
 
 .heart2{
     position: absolute;
-    z-index: -1;
+/*     z-index: -1; */
     width: 80px;
     height: 80px;
-    border-radius: 50%;
+    border-radius: 50% 50% 0 50%;
+    transform: rotate(45deg);
+
     background-color: white;
     border: black solid 4px;
 /*     border-left: black solid 5px; */
@@ -541,7 +543,7 @@ border-right: 46px solid transparent; */
     top: 40px;
     left: 37px;
     position: absolute;
-    z-index: -1;
+/*     z-index: -1; */
     width: 80px;
     height: 80px; 
     border-bottom: black solid 4px;

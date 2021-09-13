@@ -479,10 +479,11 @@ $width-header-el: 18rem; */
 
 .heart2 {
   position: absolute;
-  z-index: -1;
+  /*     z-index: -1; */
   width: 80px;
   height: 80px;
-  border-radius: 50%;
+  border-radius: 50% 50% 0 50%;
+  transform: rotate(45deg);
   background-color: white;
   border: black solid 4px;
   /*     border-left: black solid 5px; */
@@ -505,7 +506,7 @@ $width-header-el: 18rem; */
   top: 40px;
   left: 37px;
   position: absolute;
-  z-index: -1;
+  /*     z-index: -1; */
   width: 80px;
   height: 80px;
   border-bottom: black solid 4px;
@@ -695,24 +696,114 @@ body {
 }
 
 .like {
-  width: 1.3rem;
-  height: 1.3rem;
+  box-sizing: border-box;
+  width: 2rem;
+  height: 2rem;
   position: relative;
-  margin: auto;
-  border: solid red 1px;
+  /*     border: solid 1px purple; */
+}
+.like:hover {
+  cursor: pointer;
+}
+.like:hover .fill-heart {
+  animation: fill-heart 0.9s forwards;
+}
+.like:hover .fill-heart-right {
+  animation: fill-heart-right 0.9s forwards;
+}
+.like:hover .fill-heart-bottom {
+  animation: fill-heart-bottom 0.9s forwards;
 }
 
 .heart {
+  box-sizing: border-box;
   position: absolute;
-  width: 50%;
-  height: 50%;
-  border: blue 1px solid;
-  background: red;
+  width: 1rem;
+  height: 1rem;
+  background: white;
 }
 .heart__top {
-  border-radius: 50%;
+  /* z-index: -1; */
+  border-radius: 50% 50% 0 50%;
+  transform: rotate(45deg);
+  border: black 1px solid;
+  /*         border-left: $like-border-clr $like-border-sz solid;
+          border-bottom: $like-border-clr $like-border-sz solid; */
+}
+.heart__top__bkgrd {
+  border: transparent 1px solid;
+  z-index: 3;
+  background: #9356DC;
+  background-clip: border-box;
+  /*             border-radius: 50% 50% 0% 50%; */
+  transform: scale(0);
+}
+.heart__top--right {
+  /* z-index: -2; */
+  left: 40%;
+  border-bottom: unset;
+  border-right: black 1px solid;
+}
+.heart__top--right__bkgrd {
+  border: transparent 1px solid;
+  z-index: 3;
+  background: #9356DC;
+  background-clip: border-box;
+  transform: rotate(45deg) scale(0);
+}
+.heart__bottom {
+  top: 20%;
+  left: 20%;
+  /*         z-index: 2; */
+  border-bottom: black 1px solid;
+  border-right: black 1px solid;
+  transform: rotate(45deg);
+  background: -moz-linear-gradient(135deg, white 90%, transparent);
+}
+.heart__bottom__bkgrd {
+  border: transparent 1px solid;
+  /*             z-index: 3; */
+  background: #9356DC;
+  /*             background: -moz-linear-gradient( */
+  /*         to right bottom,  */
+  /*                         135deg,
+                          $color-secondary,
+                          $color-primary 50%
+                          ); */
+  background-clip: border-box;
+  transform: rotate(45deg) scaleY(0);
 }
 
+@keyframes fill-heart {
+  0% {
+    transform-origin: right;
+    transform: translate(-15%, 35%) rotate(45deg) scale(0);
+  }
+  100% {
+    transform-origin: right;
+    transform: translate(-15%, 35%) rotate(45deg) scale(1);
+  }
+}
+@keyframes fill-heart-right {
+  0% {
+    transform-origin: bottom;
+    transform: translate(-35%, -15%) rotate(45deg) scale(0);
+  }
+  100% {
+    transform-origin: bottom;
+    transform: translate(-35%, -15%) rotate(45deg) scale(1);
+  }
+}
+@keyframes fill-heart-bottom {
+  0% {
+    transform-origin: center;
+    transform: rotate(45deg) scale(0);
+  }
+  100% {
+    transform-origin: center;
+    transform: rotate(45deg) scale(1);
+  }
+}
 .bloc-page {
   /*     max-width: 1440px;
       margin: auto; */
