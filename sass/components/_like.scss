@@ -86,12 +86,12 @@ $like-hover-clr: $color-primary;
             border: transparent $like-border-sz solid;
 /*             z-index: 3; */
                 background: $like-hover-clr;
-/*             background: -moz-linear-gradient( */
+            background: -moz-linear-gradient(
                 /*         to right bottom,  */
-/*                         135deg,
+                        135deg,
                         $color-secondary,
                         $color-primary 50%
-                        ); */
+                        );
             background-clip: border-box;
             transform: rotate(45deg) scaleY(0);
         }                            

@@ -7,20 +7,37 @@
 /*     padding: 1rem 20rem 1rem 20rem; */
     @include padding-main;
     font-size: 1.8rem;
+    @include media-min-height(1280px){
+        margin-top: 3rem;
+    }
     & > :last-child{
         display: flex;
-        justify-content: space-between;
-        @include max-media("mobile"){
+        flex-direction: column;
+        justify-content: start;
+        @include media-min("mobile-down"){
+            flex-direction: row;
+            justify-content: space-between;
+        }
+/*         @include max-media("mobile"){
             flex-direction: column;
             justify-content: start;
+        } */
+        @include media-min("desktop"){
+/*             justify-content: space-between; */
         }
     }
     & a{
         color: white;
         display: flex;
-        margin: 0.7rem 0 0.7rem 0;
-        @include max-media("mobile"){
+        margin: 0.4rem 0 0.4rem 0;
+        @include media-min("mobile-down"){
+            margin: 0.7rem 0 0.7rem 0;
+        }
+/*         @include max-media("mobile"){
             margin: 0.4rem 0 0.4rem 0;
+        } */
+        @include media-min("desktop"){
+/*             margin: 0.7rem 0 0.7rem 0; */
         }
     } 
     & .fas{

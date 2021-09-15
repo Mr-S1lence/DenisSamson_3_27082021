@@ -10,9 +10,11 @@
 
 body{
     font-family: roboto-regular;
-    @include max-media("mobile"){
-        font-size: 4vw;
-    }
+    font-size: 4vw;
+@include media-min("mobile-down"){
+    font-size: unset;
+}
+
 }
 
 h2{

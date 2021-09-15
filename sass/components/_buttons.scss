@@ -13,28 +13,42 @@
         background: linear-gradient($color-secondary, $color-primary);
         color: white;
         &--command{
-            margin-right: 0;
-            margin-bottom: 0;
-            @include max-media("mobile"){
+            margin: auto;
+/*             @include max-media("mobile"){
                 margin: auto;
-            }
-            @include min-media("mobile-down"){
+            } */
+/*             @include min-media("mobile-down"){
                 margin: auto;
+            } */
+            @include media-min("desktop"){
+                margin-right: 0;
+                margin-bottom: 0;
             }
         }
     }
     &__functioning{
-        width: 14rem;
-        margin-right: 3rem;
-        @include max-media("mobile"){
+        margin-right: 0;
+        margin-bottom: 1rem;
+        width: 18rem;
+        height: 4rem;
+        @include media-min("mobile-down"){
+            margin-right: 2rem;
+            margin-bottom: 0;
+            width: 14rem;  
+            height: 3rem;          
+        }
+/*         @include max-media("mobile"){
             margin-right: 0;
             margin-bottom: 1rem;
             width: 18rem;
             height: 4rem;
-        }
-        @include min-media("mobile-down"){
+        } */
+/*         @include min-media("mobile-down"){
             margin-right: 2rem;
             height: 3rem;
+        } */
+        @include media-min("laptop-down"){
+            margin-right: 3rem;
         }
         background: $color-background-elements;
         & .fas{

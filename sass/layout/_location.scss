@@ -1,24 +1,44 @@
 .location{
-    grid-row: 3;
-    grid-column: span 5;
-    padding-left: 37rem;
-@include max-media("desktop"){
+    grid-column:1;
+    grid-row: 2;
+    padding-left: 0;
+    justify-content: center;
+    margin-bottom: 2rem;
+    @include media-min("mobile-down"){
+        justify-content: unset;
+        padding-left: 8.5rem;
+        grid-row: 3;
+        grid-column: span 5;
+        margin-bottom: 0;
+    }
+    @include media-min("laptop"){
+        padding-left: 10.5rem;
+    }
+    @include media-min("laptop-down"){
+        padding-left: 22rem;
+    }
+    @include media-min("desktop"){
+/*         grid-row: 3;
+        grid-column: span 5; */
+        padding-left: 37rem;
+    }
+/* @include max-media("desktop"){
     padding-left: 22rem;
-}
-@include min-media("mobile-down"){
+} */
+/* @include min-media("mobile-down"){
     padding-left: 8.5rem;
-}
-@include min-media("laptop"){
+} */
+/* @include min-media("laptop"){
     padding-left: 10.5rem;
-}
+} */
 
-    @include max-media("mobile"){
+/*     @include max-media("mobile"){
         grid-column:1;
         grid-row: 2;
         padding-left: 0;
         justify-content: center;
         margin-bottom: 2rem;
-    }
+    } */
     height: 3rem;
     margin-top: 1rem;
     background: $color-background-location;

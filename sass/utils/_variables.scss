@@ -15,7 +15,7 @@ $padding-section: 2rem;
 $box-shadow: 0px 12px 5px -6px rgba(0,0,0,0.17);
 
 
-$breakpoints: (
+/* $breakpoints: (
     mobile: 420px,
     mobile-down: 499px,
     tablet: 767px,
@@ -23,6 +23,32 @@ $breakpoints: (
     laptop: 1023px,
     laptop-down: 1179px,
     desktop: 1440px
+); */
+
+$breakpoints: (
+    "mobile-down": 500px,
+    "tablet": 768px,
+    "tablet-down": 900px,
+    "laptop": 1024px,
+    "laptop-down": 1280px,
+    "desktop": 1440px
 );
 
 
+@mixin media-min($key) {
+    @media screen and (min-width: map-get($breakpoints, $key)) {
+        &{ @content; }
+    }
+}
+
+@mixin media-min-max($key, $key2){
+    @media only screen and (min-width: map-get($breakpoints, $key)) and (max-width: map-get($breakpoints, $key) - 1){
+        &{ @content; }
+    }
+}
+
+@mixin media-min-height($key1){
+    @media screen and ( height: $key1 ){
+        & { @content; }
+    }
+}

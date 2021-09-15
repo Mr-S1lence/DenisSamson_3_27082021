@@ -5,18 +5,27 @@ main{
 
 .container{
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: 1fr;
     @include margin-content;
-    margin-top: 2rem;
+    margin-bottom: 3rem;
+/*     margin-top: 2rem; */
     grid-column-gap: 6rem;
-    grid-row-gap: 5rem;
-    @include max-media("mobile"){
+    grid-row-gap: 1rem;
+    @include media-min("mobile-down"){
+        grid-template-columns: repeat(2, 2fr);
+        grid-gap: 2rem;
+    }
+/*     @include max-media("mobile"){
         grid-template-columns: 1fr;
         grid-row-gap: 1rem;
         margin-bottom: 3rem;;
-    }
-    @include min-media("mobile-down"){
+    } */
+/*     @include min-media("mobile-down"){
         grid-gap: 2rem;
+    } */
+    @include media-min("laptop-down"){
+            grid-row-gap: 5rem;
+            grid-column-gap: 6rem;
     }
 }
 
@@ -24,22 +33,28 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: end;
-    align-items: center;
+
     width: 100%;
     background-image:url("../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
     background-repeat: no-repeat;
 /*     background-attachment: fixed; */
-    background-position: center; 
+
     background-size: 100% auto;
-    background-size: cover;
-    padding-top: 5%;
-    @include max-media("mobile"){
-        background-repeat: no-repeat;
+
+
+/*     @include max-media("mobile"){
+        background-repeat: no-repeat; */
         /*     background-attachment: fixed; */
-            background-position: unset; 
+/*             background-position: unset; 
             background-size: 100% auto;
             padding-top: 0;
             align-items: unset;
+    } */
+    @include media-min("desktop"){
+        align-items: center;
+        padding-top: 5%;
+        background-position: center; 
+        background-size: cover;
     }
 }
 
@@ -47,17 +62,23 @@ main{
 /*     width: 60rem; */
    /*  height: 90rem; */
     background: $color-background-elements;
-    border-top-right-radius: 5rem;
-    border-top-left-radius: 5rem;
-    padding: 3rem;
-    @include max-media("mobile"){
+    margin-top: 12rem;
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+    padding: 1rem;
+/*     @include max-media("mobile"){
         margin-top: 12rem;
         border-top-right-radius: 2rem;
         border-top-left-radius: 2rem;
         padding: 1rem;
-    }
-    @include min-media("mobile-down"){
+    } */
+/*     @include min-media("mobile-down"){
 
+    } */
+    @include media-min("desktop"){
+        border-top-right-radius: 5rem;
+        border-top-left-radius: 5rem;
+        padding: 3rem;
     }
 /*     margin-top: 3%; */
     &__title{
@@ -75,17 +96,23 @@ main{
 .menu-board{
 /*     border: solid red 1px; */
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    grid-gap: 3rem;
-    margin: 3rem 1rem 3rem 1rem;
-    @include max-media("mobile"){
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    margin: 2rem 0 2rem 0;
+
+/*     @include max-media("mobile"){
         grid-template-columns: 1fr;
         grid-gap: 2rem;
         margin: 2rem 0 2rem 0;
-    }
-    @include min-media("mobile-down"){
+    } */
+/*     @include min-media("mobile-down"){
         grid-template-columns: 1fr;
         grid-gap: 2rem;
+    } */
+    @include media-min("laptop-down"){
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 3rem;
+    margin: 3rem 1rem 3rem 1rem;
     }
 
     &__part{

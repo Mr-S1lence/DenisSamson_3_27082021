@@ -23,17 +23,17 @@
 }
  */
 
-@mixin max-media($key){
+/* @mixin max-media($key){
     @media screen and (max-width: map-get($breakpoints, $key)){
         @content;
     }
-}
+} */
 
-@mixin min-media($key){
+/* @mixin min-media($key){
     @media screen and (min-width: map-get($breakpoints, $key)) and (max-width: map-get($breakpoints, laptop-down)){
         @content;
     }
-}
+} */
 
 /* $margin-header: 30rem;
 $width-header-el: 18rem; */
@@ -44,24 +44,39 @@ $width-header-el: 18rem; */
 } */
 
 @mixin padding-main{
-    padding: 1rem 26rem 1rem 26rem;
-    @include max-media("desktop"){
+    padding: 1rem 1rem 1rem 1rem;
+    @include media-min("mobile-down"){
+
+    }
+/*     @include max-media("desktop"){
+        padding: 1rem 10rem 1rem 10rem;
+    } */
+/*         @include max-media("mobile"){
+        padding: 1rem 1rem 1rem 1rem;
+    } */
+/*     @include min-media("mobile-down"){
+        padding: 1rem 1rem 1rem 1rem;
+    } */
+    @include media-min("laptop-down"){
         padding: 1rem 10rem 1rem 10rem;
     }
-        @include max-media("mobile"){
-        padding: 1rem 1rem 1rem 1rem;
-    }
-    @include min-media("mobile-down"){
-        padding: 1rem 1rem 1rem 1rem;
+    @include media-min("desktop"){
+        padding: 1rem 26rem 1rem 26rem;
     }
 }
 
 @mixin margin-content{
-    margin: 0 5rem 2rem 5rem;
-    @include max-media("mobile"){
-        margin: auto 0rem auto 0rem;
-    }
-    @include min-media("mobile-down"){
+    margin: auto 0rem auto 0rem;
+    @include media-min("mobile-down"){
         margin: 0 2rem 2rem 2rem;
+    }    
+/*     @include max-media("mobile"){
+        margin: auto 0rem auto 0rem;
+    } */
+/*     @include min-media("mobile-down"){
+        margin: 0 2rem 2rem 2rem;
+    } */
+    @include media-min("laptop-down"){
+        margin: 0 5rem 2rem 5rem;
     }
 }

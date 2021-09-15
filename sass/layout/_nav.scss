@@ -2,15 +2,19 @@
     display: flex;
     flex-direction: column;
 /*     padding: 1rem 20rem 3rem 20rem; */
-    @include padding-main;
-    ;
+    @include padding-main; 
 /*     background: blue; */
     & nav{
         display: flex;
+        flex-direction: column;
+        align-items: center;
         @include margin-content;
-        @include max-media("mobile"){
+/*         @include max-media("mobile"){
             flex-direction: column;
             align-items: center;
+        } */
+        @include media-min("mobile-down"){
+            flex-direction: row;
         }
     }
 }
