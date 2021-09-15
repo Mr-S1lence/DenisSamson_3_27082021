@@ -20,7 +20,7 @@
 /*             @include min-media("mobile-down"){
                 margin: auto;
             } */
-            @include media-min("desktop"){
+            @include media-min("laptop"){
                 margin-right: 0;
                 margin-bottom: 0;
             }
@@ -32,10 +32,15 @@
         width: 18rem;
         height: 4rem;
         @include media-min("mobile-down"){
-            margin-right: 2rem;
+            margin-right: 0;
             margin-bottom: 0;
-            width: 14rem;  
-            height: 3rem;          
+            width: 12rem;  
+            height: 3rem;   
+            padding-right: 0.5rem;       
+        }
+        @include media-min("laptop"){
+            width: 18rem;
+            margin-right: 3rem;
         }
 /*         @include max-media("mobile"){
             margin-right: 0;
@@ -74,6 +79,7 @@
     justify-content: center;
     align-items: center;
     width: 1.6rem;
+    min-width: 1.6rem;
     height: 1.6rem;
     border-radius: 50%;
     position: relative;

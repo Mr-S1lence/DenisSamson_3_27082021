@@ -15,6 +15,11 @@
         } */
         @include media-min("mobile-down"){
             flex-direction: row;
+            justify-content: space-between;
+        }
+        @include media-min("laptop"){
+
+            justify-content: start;
         }
     }
 }

@@ -1,6 +1,9 @@
 main{
     @include padding-main;
     background: $color-background-elements;
+         @include media-min-height(1280px){
+        padding-bottom: 3rem;
+    } 
 }
 
 .container{
@@ -50,7 +53,7 @@ main{
             padding-top: 0;
             align-items: unset;
     } */
-    @include media-min("desktop"){
+    @include media-min("mobile-down"){
         align-items: center;
         padding-top: 5%;
         background-position: center; 
@@ -75,7 +78,8 @@ main{
 /*     @include min-media("mobile-down"){
 
     } */
-    @include media-min("desktop"){
+    @include media-min("mobile-down"){
+        margin-top: unset;
         border-top-right-radius: 5rem;
         border-top-left-radius: 5rem;
         padding: 3rem;
@@ -99,6 +103,9 @@ main{
     grid-template-columns: 1fr;
     grid-gap: 2rem;
     margin: 2rem 0 2rem 0;
+    @include media-min("mobile-down"){
+        margin: 3rem 1rem 3rem 1rem;
+    }
 
 /*     @include max-media("mobile"){
         grid-template-columns: 1fr;
@@ -109,10 +116,10 @@ main{
         grid-template-columns: 1fr;
         grid-gap: 2rem;
     } */
-    @include media-min("laptop-down"){
+    @include media-min("tablet-down"){
     grid-template-columns: repeat(2, 2fr);
     grid-gap: 3rem;
-    margin: 3rem 1rem 3rem 1rem;
+
     }
 
     &__part{

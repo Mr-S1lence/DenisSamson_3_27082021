@@ -663,7 +663,7 @@ body {
                   margin: auto;
               } */
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .btn__explorer--command {
     margin-right: 0;
     margin-bottom: 0;
@@ -688,10 +688,17 @@ body {
 }
 @media screen and (min-width: 500px) {
   .btn__functioning {
-    margin-right: 2rem;
+    margin-right: 0;
     margin-bottom: 0;
-    width: 14rem;
+    width: 12rem;
     height: 3rem;
+    padding-right: 0.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .btn__functioning {
+    width: 18rem;
+    margin-right: 3rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -720,6 +727,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 1.6rem;
+  min-width: 1.6rem;
   height: 1.6rem;
   border-radius: 50%;
   position: relative;
@@ -1127,6 +1135,12 @@ body {
 @media screen and (min-width: 500px) {
   .functioning nav {
     flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .functioning nav {
+    justify-content: start;
   }
 }
 
@@ -1151,6 +1165,11 @@ main {
 @media screen and (min-width: 1440px) {
   main {
     padding: 1rem 26rem 1rem 26rem;
+  }
+}
+@media screen and (height: 1280px) {
+  main {
+    padding-bottom: 3rem;
   }
 }
 
@@ -1218,7 +1237,7 @@ main {
               align-items: unset;
       } */
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 500px) {
   .container-restaurant {
     align-items: center;
     padding-top: 5%;
@@ -1246,8 +1265,9 @@ main {
       } */
   /*     margin-top: 3%; */
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 500px) {
   .menu {
+    margin-top: unset;
     border-top-right-radius: 5rem;
     border-top-left-radius: 5rem;
     padding: 3rem;
@@ -1280,11 +1300,15 @@ main {
           grid-gap: 2rem;
       } */
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 500px) {
+  .menu-board {
+    margin: 3rem 1rem 3rem 1rem;
+  }
+}
+@media screen and (min-width: 900px) {
   .menu-board {
     grid-template-columns: repeat(2, 2fr);
     grid-gap: 3rem;
-    margin: 3rem 1rem 3rem 1rem;
   }
 }
 .menu-board__part {
@@ -1406,11 +1430,6 @@ main {
 @media screen and (min-width: 1440px) {
   .footer {
     padding: 1rem 26rem 1rem 26rem;
-  }
-}
-@media screen and (height: 1280px) {
-  .footer {
-    margin-top: 3rem;
   }
 }
 .footer > :last-child {

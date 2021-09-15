@@ -7,9 +7,6 @@
 /*     padding: 1rem 20rem 1rem 20rem; */
     @include padding-main;
     font-size: 1.8rem;
-    @include media-min-height(1280px){
-        margin-top: 3rem;
-    }
     & > :last-child{
         display: flex;
         flex-direction: column;
