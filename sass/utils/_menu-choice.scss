@@ -1,0 +1,172 @@
+.bkgrd-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 100%;
+    background-image:url("../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    background-repeat: no-repeat;
+/*     background-attachment: fixed; */
+    background-size: 100% auto;
+    @include media-min("mobile-down"){
+        align-items: center;
+        padding-top: 5%;
+        background-position: center; 
+        background-size: cover;
+    }
+}
+
+.menu{
+/*     width: 60rem; */
+   /*  height: 90rem; */
+    background: $color-background-elements;
+    margin-top: 12rem;
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+    padding: 1rem 0.5rem;
+    @include media-min("mobile-down"){
+        margin-top: unset;
+        border-top-right-radius: 5rem;
+        border-top-left-radius: 5rem;
+        padding: 3rem;
+    }
+/*     margin-top: 3%; */
+    &__title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'shrikhand-regular';
+        font-size: 1.8rem;
+        & h3{
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.menu-board{
+/*     border: solid red 1px; */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    margin: 2rem 0 2rem 0;
+    @include media-min("mobile-down"){
+        margin: 3rem 1rem 3rem 1rem;
+    }
+    @include media-min("tablet-down"){
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 3rem;
+
+    }
+
+    &__part{
+/*         border: blue solid 1px;
+        background: red; */
+    }
+    &__subtitle{
+        color: gray;
+    }
+    &__underline{
+        width: 3rem;
+        height: 3px;
+        margin-top: 2px;
+        background: #99e2d0;
+    }
+    &__subpart{
+        width: 21rem;
+        margin: auto;
+        @include media-min("mobile-down"){
+            width: unset;
+        }
+        display: flex;
+/*         background: blue; */
+        margin-top: 1rem;
+        overflow: hidden;
+        border-radius: 1rem;
+        box-shadow: $box-shadow;
+        & > div:first-child{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+/*             padding: 2%; */
+            background: white;
+/*             border-radius: 1rem 0 0 1rem; */
+            & div{
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        & h3{
+            margin: 0.5rem 0.5rem 0rem 0.5rem;
+            align-self: stretch;
+            font-size: 1rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        & p{
+            margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+/*             margin: 1rem; */
+            font-size: 0.9rem;
+        }
+        @include media-min("mobile-down"){
+            & p{
+                margin: 0.5rem 1rem 1rem 1rem; 
+            }
+            & h3{
+                margin: 1rem 1rem 0rem 1rem;
+            }
+        }
+        & p:first-child{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        &:hover{
+
+            cursor: pointer;
+            & .container-icone-check{
+                margin-right: 0;
+                transition: 0.5s ease-in-out;
+            }
+            & > div:first-child{
+                width: 80%;
+                transition: 0.5s ease-in-out;
+                
+            }
+            & .icon-check{
+                animation: menu-choice 0.5s ease-in-out forwards;
+            }
+        }
+    }
+
+}
+
+.container-icone-check{
+    background: #99e2d0;
+    width: 20%;
+    min-width: 20%;
+    margin-right: -20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & .icon-check{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: white;
+        border-radius: 50%;
+        & .fa-check{
+            color: #99e2d0;
+        }
+    }
+}
+
+@keyframes menu-choice{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
