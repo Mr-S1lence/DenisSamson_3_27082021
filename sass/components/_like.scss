@@ -5,7 +5,7 @@ $like-size-elm: math.div($like-size, 2);
 $like-border-sz : 1px;
 $like-border-clr : black;
 
-$like-backgrd-clr : white;
+$like-backgrd-clr : $color-background-elements;
 $like-hover-clr: $color-primary;
 
 

@@ -75,7 +75,7 @@ $width-header-el: 18rem; */
   border: solid 6px #9356DC;
   border-top: solid 6px #FF79DA;
   border-radius: 50%;
-  animation: test 0.2s cubic-bezier(0.99, 0.16, 0.25, 1.01) infinite;
+  animation: test 1s cubic-bezier(0.99, 0.16, 0.25, 1.01) infinite;
   animation: color .loader span;
   animation-position: absolute;
 }
@@ -87,11 +87,12 @@ $width-header-el: 18rem; */
 }
 
 @keyframes test {
-  /*     from{
-          opacity: 0.5;
+  /*     0%{ */
+  /*         opacity: 0.5; */
+  /*         transform: rotate(0);
       } */
-  to {
-    opacity: 1;
+  100% {
+    /*         opacity: 1; */
     transform: rotate(360deg);
   }
 }
@@ -760,7 +761,7 @@ body {
   position: absolute;
   width: 1rem;
   height: 1rem;
-  background: white;
+  background: #f6f6f6;
 }
 .heart__top {
   /* z-index: -1; */
@@ -798,7 +799,7 @@ body {
   border-bottom: black 1px solid;
   border-right: black 1px solid;
   transform: rotate(45deg);
-  background: -moz-linear-gradient(135deg, white 90%, transparent);
+  background: -moz-linear-gradient(135deg, #f6f6f6 90%, transparent);
 }
 .heart__bottom__bkgrd {
   border: transparent 1px solid;
