@@ -25,6 +25,10 @@ $half-hourglass-top-position-left: math.div($half-hourglass-position-left, -10);
 @debug "$half-hourglass-border-bottom: #{$half-hourglass-border-bottom}";
 @debug "half-hourglass-border: #{$half-hourglass-border}";
 
+
+$anim-duration: 1.50s;
+
+
 .container-hourglass{
  /*    position: relative; */
     display: flex;
@@ -37,9 +41,9 @@ $half-hourglass-top-position-left: math.div($half-hourglass-position-left, -10);
     margin: auto;
 /*     background: $color-primary; */
 border: solid 10px $color-primary;
-    animation: hourglass-rotate 0.5s cubic-bezier(.99,.16,.25,1.01) forwards
-/*    , hourglass-rotate-reverse 0.5s 1.20s cubic-bezier(.99,.16,.25,1.01) forwards, */
-/*     hourglass-disappears 0.5s 1.20s cubic-bezier(.99,.16,.25,1.01)
+    animation: hourglass-rotate 1.20s cubic-bezier(.99,.16,.25,1.01) backwards, 
+    hourglass-rotate-reverse 1.20s 1.20s cubic-bezier(.99,.16,.25,1.01) forwards
+/*    , hourglass-disappears 1.20s 1.20s cubic-bezier(.99,.16,.25,1.01)
     forwards */
     ; 
 /*     background: blue; */
@@ -55,18 +59,25 @@ border: solid 10px $color-primary;
 }
 
 @keyframes hourglass-rotate {
-    to{
+    0%{        
+        transform: rotate(0);
+
+    }30%{
+        transform: rotate(180deg);
+    }100%{
         transform: rotate(180deg);
     }
 }
 
-/* @keyframes hourglass-rotate-reverse{
+@keyframes hourglass-rotate-reverse{
     0%{
-        transform: rotate(180deg);
+        transform: scale(1.50);
+    }20%{
+        transform: rotate(0) scale(1);
     }100%{
-        transform: rotate(-999deg);
+        transform: rotate(-999deg) scale(0);
     }
-} */
+}
 
 @keyframes hourglass-disappears{
     0%{
@@ -132,7 +143,7 @@ $sand-position-right: math.div(4*$container-hourglass-relative-width, 100);
     border-bottom-right-radius: 35%;
     transform-origin: top;
     animation: sand-rotate 1.20s  
-    forwards
+    backwards
     ;
     &--top{
         position: absolute;
@@ -147,7 +158,7 @@ $sand-position-right: math.div(4*$container-hourglass-relative-width, 100);
         transform: scale(0);
         transform-origin: top;           /*  <<<<<<<<<<<<================================== */
         animation: sand-filling 0.80s 0.40s    
-        forwards
+        backwards
         ;
     }   
 }
@@ -216,6 +227,7 @@ $flowing-sand-hight: math.div((42*$hourglass-size), 100);
     z-index: 3;
     position: absolute;
     background: $color-primary;
+/* background: red; */
     top: $sand-bottom-top-position;
     left: $flowing-sand-position-left; 
     width: $flowing-sand-width;
@@ -223,7 +235,7 @@ $flowing-sand-hight: math.div((42*$hourglass-size), 100);
 /*     margin-left: 49px; */
 
     transform: scale(0);
-    animation: flowing-sand 1s 0.38s forwards;    
+    animation: flowing-sand 0.80s 0.38s forwards;    
 }
 
 @keyframes flowing-sand{
@@ -233,11 +245,12 @@ $flowing-sand-hight: math.div((42*$hourglass-size), 100);
     }10%{
         transform-origin: bottom;
         transform: scaleY(1);
-    }70%{
-        transform-origin: top;
-        transform: scaleY(1);
+    }90%{
+        transform-origin: bottom;
+        transform: scaleY(0.60);
     }100%{
-        transform-origin: top;
+        transform-origin: center;
         transform: scaleY(0);
+
     } 
 }

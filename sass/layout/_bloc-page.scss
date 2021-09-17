@@ -16,12 +16,15 @@ height: 1500px;
     bottom: 0;
     left: 0;
     right: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 /*     border: solid 5px blue; */
 /* background: white; */
 background-color: rgba(255, 255, 255, 1);
     margin: 0;
     transform: opacity(0);
-    animation: loader-start 1.50s 1.20s forwards;
+    animation: loader-start 2.00s 1.20s forwards;
 
 }
 
@@ -30,5 +33,6 @@ background-color: rgba(255, 255, 255, 1);
     background-color: rgba(255, 255, 255, 1);
     }100%{
     background-color: rgba(255, 255, 255, 0);
+    display: none;
     }
 }

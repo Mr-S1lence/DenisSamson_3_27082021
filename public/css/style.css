@@ -859,7 +859,7 @@ body {
   margin: auto;
   /*     background: $color-primary; */
   border: solid 10px #9356DC;
-  animation: hourglass-rotate 0.5s cubic-bezier(0.99, 0.16, 0.25, 1.01) forwards;
+  animation: hourglass-rotate 1.2s cubic-bezier(0.99, 0.16, 0.25, 1.01) backwards, hourglass-rotate-reverse 1.2s 1.2s cubic-bezier(0.99, 0.16, 0.25, 1.01) forwards;
   /*     background: blue; */
 }
 .container-hourglass__relative {
@@ -876,17 +876,27 @@ body {
 }
 
 @keyframes hourglass-rotate {
-  to {
+  0% {
+    transform: rotate(0);
+  }
+  30% {
+    transform: rotate(180deg);
+  }
+  100% {
     transform: rotate(180deg);
   }
 }
-/* @keyframes hourglass-rotate-reverse{
-    0%{
-        transform: rotate(180deg);
-    }100%{
-        transform: rotate(-999deg);
-    }
-} */
+@keyframes hourglass-rotate-reverse {
+  0% {
+    transform: scale(1.5);
+  }
+  20% {
+    transform: rotate(0) scale(1);
+  }
+  100% {
+    transform: rotate(-999deg) scale(0);
+  }
+}
 @keyframes hourglass-disappears {
   0% {
     transform: scale(1.5);
@@ -947,7 +957,7 @@ body {
   border-bottom-left-radius: 35%;
   border-bottom-right-radius: 35%;
   transform-origin: top;
-  animation: sand-rotate 1.2s forwards;
+  animation: sand-rotate 1.2s backwards;
 }
 .sand--top {
   position: absolute;
@@ -964,7 +974,7 @@ body {
   transform: scale(0);
   transform-origin: top;
   /*  <<<<<<<<<<<<================================== */
-  animation: sand-filling 0.8s 0.4s forwards;
+  animation: sand-filling 0.8s 0.4s backwards;
 }
 
 @keyframes sand-rotate {
@@ -1004,13 +1014,14 @@ body {
   z-index: 3;
   position: absolute;
   background: #9356DC;
+  /* background: red; */
   top: 2.4px;
   left: 24.5px;
   width: 1px;
   height: 42px;
   /*     margin-left: 49px; */
   transform: scale(0);
-  animation: flowing-sand 1s 0.38s forwards;
+  animation: flowing-sand 0.8s 0.38s forwards;
 }
 
 @keyframes flowing-sand {
@@ -1022,12 +1033,12 @@ body {
     transform-origin: bottom;
     transform: scaleY(1);
   }
-  70% {
-    transform-origin: top;
-    transform: scaleY(1);
+  90% {
+    transform-origin: bottom;
+    transform: scaleY(0.6);
   }
   100% {
-    transform-origin: top;
+    transform-origin: center;
     transform: scaleY(0);
   }
 }
@@ -1226,12 +1237,15 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
   /*     border: solid 5px blue; */
   /* background: white; */
   background-color: white;
   margin: 0;
   transform: opacity(0);
-  animation: loader-start 1.5s 1.2s forwards;
+  animation: loader-start 2s 1.2s forwards;
 }
 
 @keyframes loader-start {
@@ -1240,6 +1254,7 @@ body {
   }
   100% {
     background-color: rgba(255, 255, 255, 0);
+    display: none;
   }
 }
 .header {
