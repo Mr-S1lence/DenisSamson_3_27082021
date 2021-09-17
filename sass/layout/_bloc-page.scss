@@ -24,7 +24,9 @@ height: 1500px;
 background-color: rgba(255, 255, 255, 1);
     margin: 0;
     transform: opacity(0);
-    animation: loader-start 2.00s 1.20s forwards;
+    animation: loader-start 1.50s 1.20s forwards,
+    loader-end 0.01s 2.70s forwards
+    ;
 
 }
 
@@ -34,5 +36,12 @@ background-color: rgba(255, 255, 255, 1);
     }100%{
     background-color: rgba(255, 255, 255, 0);
     display: none;
+    }
+}
+
+@keyframes loader-end{
+    to{
+        right: unset;
+        bottom: unset;
     }
 }
