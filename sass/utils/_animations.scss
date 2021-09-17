@@ -1,10 +1,11 @@
-.loader_container{
+.lab_container{
     width: 40rem;
-    height: 40rem;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
+    margin-top: 10rem;
     position: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,6 +82,7 @@
     border-radius: 50%;
     width: 164px;
     height: 164px;
+    background: red;
     margin: auto;
 /*     transform: rotate(90deg); */
       animation: sablier-rotate 0.5s cubic-bezier(.99,.16,.25,1.01) /*  <<<<<<<<<<<<================================== */
@@ -90,11 +92,11 @@
 
 
 .container-trapeze-center{
-    width: 4px;
+    width: 2px;
     height: 2px;
     border-left: solid $color-secondary 3px;
     border-right: solid $color-secondary 3px;
-    background: white;
+    background: red;
 }
 
 .container-relative-sablier{
