@@ -820,7 +820,7 @@ body {
 .heart__btm__hover {
   z-index: 5;
   border: unset;
-  background: -moz-linear-gradient(135deg, #FF79DA, #9356DC 50%);
+  background: -webkit-linear-gradient(135deg, #FF79DA, #9356DC 50%);
   transform: scale(0);
 }
 
