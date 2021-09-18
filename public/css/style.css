@@ -738,24 +738,34 @@ body {
   color: white;
 }
 
-.like {
-  box-sizing: border-box;
+/* @import "./components/like";
+@import "./components/like2"; */
+.like-container {
   width: 2rem;
   height: 2rem;
-  position: relative;
-  /*     border: solid 1px purple; */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.like:hover {
+.like-container__relative {
+  margin-top: 15%;
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+  transform: rotate(45deg);
+}
+.like-container:hover {
   cursor: pointer;
 }
-.like:hover .fill-heart {
-  animation: fill-heart 0.9s forwards;
+.like-container:hover .heart__top-lft__hover {
+  animation: fill-heart-top-lft 0.9s forwards;
 }
-.like:hover .fill-heart-right {
-  animation: fill-heart-right 0.9s forwards;
+.like-container:hover .heart__top-rgt__hover {
+  animation: fill-heart-top-rgt 0.9s forwards;
 }
-.like:hover .fill-heart-bottom {
-  animation: fill-heart-bottom 0.9s forwards;
+.like-container:hover .heart__btm__hover {
+  animation: fill-heart-btm 0.9s forwards;
 }
 
 .heart {
@@ -763,83 +773,85 @@ body {
   position: absolute;
   width: 1rem;
   height: 1rem;
-  background: #f6f6f6;
+  border: solid 1px black;
+  background: white;
 }
-.heart__top {
-  /* z-index: -1; */
-  border-radius: 50% 50% 0 50%;
-  transform: rotate(45deg);
-  border: black 1px solid;
-  /*         border-left: $like-border-clr $like-border-sz solid;
-          border-bottom: $like-border-clr $like-border-sz solid; */
-}
-.heart__top__bkgrd {
-  border: transparent 1px solid;
+.heart__top-rgt {
   z-index: 3;
+  border-bottom: unset;
+  border-radius: 50% 50% 0 0;
+  left: 0;
+  top: -50%;
+}
+.heart__top-rgt__hover {
+  border: transparent 1px solid;
+  z-index: 5;
   background: #9356DC;
   background-clip: border-box;
-  /*             border-radius: 50% 50% 0% 50%; */
   transform: scale(0);
 }
-.heart__top--right {
-  /* z-index: -2; */
-  left: 40%;
-  border-bottom: unset;
-  border-right: black 1px solid;
+.heart__top-lft {
+  border-right: unset;
+  left: -50%;
+  top: 0;
+  border-radius: 50% 0% 0 50%;
 }
-.heart__top--right__bkgrd {
+.heart__top-lft__hover {
+  z-index: 5;
   border: transparent 1px solid;
-  z-index: 3;
   background: #9356DC;
   background-clip: border-box;
-  transform: rotate(45deg) scale(0);
+  transform: scale(0);
 }
-.heart__bottom {
-  top: 20%;
-  left: 20%;
-  /*         z-index: 2; */
-  border-bottom: black 1px solid;
-  border-right: black 1px solid;
-  transform: rotate(45deg);
-  background: -moz-linear-gradient(135deg, #f6f6f6 90%, transparent);
+.heart__top-lft__hide-border {
+  z-index: 4;
+  border: transparent solid 1px;
+  background: white;
+  background-clip: padding-box;
 }
-.heart__bottom__bkgrd {
-  border: transparent 1px solid;
-  /*             z-index: 3; */
-  background: #9356DC;
+.heart__btm {
+  border-top: unset;
+  border-left: unset;
+  width: calc($heart-size-elm - $like-border-sz);
+  height: calc($heart-size-elm - $like-border-sz);
+  right: 0%;
+  bottom: 0%;
+}
+.heart__btm__hover {
+  z-index: 5;
+  border: unset;
   background: -moz-linear-gradient(135deg, #FF79DA, #9356DC 50%);
-  background-clip: border-box;
-  transform: rotate(45deg) scaleY(0);
+  transform: scale(0);
 }
 
-@keyframes fill-heart {
+@keyframes fill-heart-top-lft {
   0% {
     transform-origin: right;
-    transform: translate(-15%, 35%) rotate(45deg) scale(0);
+    transform: scale(0);
   }
   100% {
     transform-origin: right;
-    transform: translate(-15%, 35%) rotate(45deg) scale(1);
+    transform: scale(1);
   }
 }
-@keyframes fill-heart-right {
+@keyframes fill-heart-top-rgt {
   0% {
     transform-origin: bottom;
-    transform: translate(-35%, -15%) rotate(45deg) scale(0);
+    transform: scale(0);
   }
   100% {
     transform-origin: bottom;
-    transform: translate(-35%, -15%) rotate(45deg) scale(1);
+    transform: scale(1);
   }
 }
-@keyframes fill-heart-bottom {
+@keyframes fill-heart-btm {
   0% {
     transform-origin: center;
-    transform: rotate(45deg) scale(0);
+    transform: scale(0);
   }
   100% {
     transform-origin: center;
-    transform: rotate(45deg) scale(1);
+    transform: scale(1);
   }
 }
 /* 164px */

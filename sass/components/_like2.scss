@@ -1,0 +1,54 @@
+$taille-coeur: 100px;
+$taille-coeur-btm: $taille-coeur;
+
+
+.coeur-btm{
+    box-sizing: border-box;
+    position: relative;
+    width: $taille-coeur-btm;
+    height: $taille-coeur-btm;
+/*     background: red; */
+    background: white;
+    z-index: 4;
+/*     border: solid 1px black; */
+border-radius: 50% 50% 0 50%;
+/*     border-top: solid 1px black; */
+    border-right: solid 1px black;
+/*     border-left: solid 1px black; */
+    border-bottom: solid 1px black;
+    transform: rotate(45deg)
+}
+
+.coeur-top-lft{
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: -50%;
+    width: $taille-coeur;
+    height: $taille-coeur;
+    border-radius: 50% 50% 0 50%;
+/*     transform: rotate(45deg); */
+/*     background: blue; */
+    background: white;
+    border-top: solid 1px black;
+    border-right: solid 1px black;
+    border-left: solid 1px black;
+/*     border-bottom: solid 1px black; */
+}
+
+.coeur-top-rgt{
+    box-sizing: border-box;
+    position: absolute;
+    left: -50%;
+    top: 0;
+    width: $taille-coeur;
+    height: $taille-coeur;
+    border-radius: 50% 50% 0 50%;
+/*     transform: rotate(45deg); */
+/*     background: green; */
+    background: white;
+    border-top: solid 1px black;
+/*     border-right: solid 1px black; */
+    border-left: solid 1px black;
+    border-bottom: solid 1px black;
+}
