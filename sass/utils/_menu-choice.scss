@@ -77,11 +77,19 @@
             width: unset;
         }
         display: flex;
-/*         background: blue; */
+ /*        background: blue; */
         margin-top: 1rem;
         overflow: hidden;
         border-radius: 1rem;
         box-shadow: $box-shadow;
+        opacity: 0;
+        animation: sub-part-slide 0.5s ease-in-out forwards;
+/*         animation-delay: 0.01s; */
+        @for $i from 1 through 5{
+            &:nth-child(#{$i}){
+                animation-delay: $i * 250ms;
+            }
+        }
         & > div:first-child{
             width: 100%;
             display: flex;
@@ -168,5 +176,15 @@
     }
     100%{
         transform: rotate(360deg);
+    }
+}
+
+@keyframes sub-part-slide{
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }100%{
+        opacity: 1;
+        transform: translateY(0);
     }
 }
