@@ -608,7 +608,7 @@ body {
 
 h2 {
   /*     font-size:1.5rem; */
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 h3 {
@@ -1702,6 +1702,24 @@ main {
   .card__img img {
     height: 125%;
   }
+}
+.card__new-label {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #99e2d0;
+  z-index: 1;
+  /*         width: 11rem;
+          height: 6rem; */
+  border-radius: 0.3rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  color: #109071;
+  font-weight: bolder;
+  text-align: center;
+  vertical-align: middle;
+}
+.card__new-label p {
+  margin: unset;
 }
 .card__legend {
   display: flex;

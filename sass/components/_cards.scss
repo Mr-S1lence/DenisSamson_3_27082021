@@ -33,6 +33,24 @@
 
         }
     }
+    &__new-label{
+        position: absolute;
+        top: 1rem;
+        right: 1rem;    
+        background: #99e2d0;
+        z-index: 1;
+/*         width: 11rem;
+        height: 6rem; */
+        border-radius: 0.3rem;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        color: #109071;
+        font-weight: bolder;
+        text-align: center;
+        vertical-align: middle;
+        & p{
+            margin: unset;
+        }
+    }
     &__legend{
         display: flex;
         justify-content: space-between;
