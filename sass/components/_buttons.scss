@@ -6,20 +6,17 @@
     height: 2.5rem;
     &__explorer{
         justify-content: center;
-        width: 12rem;
-        
+        width: 12rem;    
         margin: auto;
         margin-bottom: 1rem;
         background: linear-gradient($color-secondary, $color-primary);
         color: white;
+        &:hover{
+            filter: brightness(105%);
+            box-shadow: $box-shadow-hover;
+        }
         &--command{
             margin: auto;
-/*             @include max-media("mobile"){
-                margin: auto;
-            } */
-/*             @include min-media("mobile-down"){
-                margin: auto;
-            } */
             @include media-min("laptop"){
                 margin-right: 0;
                 margin-bottom: 0;
@@ -31,6 +28,7 @@
         margin-bottom: 1rem;
         width: 18rem;
         height: 4rem;
+        border-radius: 1rem;
         @include media-min("mobile-down"){
             margin-right: 0;
             margin-bottom: 0;
@@ -42,16 +40,6 @@
             width: 18rem;
             margin-right: 3rem;
         }
-/*         @include max-media("mobile"){
-            margin-right: 0;
-            margin-bottom: 1rem;
-            width: 18rem;
-            height: 4rem;
-        } */
-/*         @include min-media("mobile-down"){
-            margin-right: 2rem;
-            height: 3rem;
-        } */
         @include media-min("laptop-down"){
             margin-right: 3rem;
         }
@@ -71,6 +59,7 @@
         cursor: pointer;
     }
 }
+
 
 .numbering{
     position: absolute;
