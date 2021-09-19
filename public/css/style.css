@@ -1318,6 +1318,11 @@ body {
 }
 @media screen and (min-width: 500px) {
   .header__logo img {
+    width: 200px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .header__logo img {
     width: 250px;
   }
 }

@@ -46,6 +46,9 @@
             & img{
                 width: 150px;
                 @include media-min("mobile-down"){
+                    width: 200px;
+                }
+                @include media-min("desktop"){
                     width: 250px;
                 }
             }
