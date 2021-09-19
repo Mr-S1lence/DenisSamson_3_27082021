@@ -42,16 +42,6 @@
             width: 18rem;
             margin-right: 3rem;
         }
-/*         @include max-media("mobile"){
-            margin-right: 0;
-            margin-bottom: 1rem;
-            width: 18rem;
-            height: 4rem;
-        } */
-/*         @include min-media("mobile-down"){
-            margin-right: 2rem;
-            height: 3rem;
-        } */
         @include media-min("laptop-down"){
             margin-right: 3rem;
         }

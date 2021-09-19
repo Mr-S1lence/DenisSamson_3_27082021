@@ -20,20 +20,7 @@
         grid-template-columns: 30rem auto 18rem 18rem 30rem;
     }
 
-/*     @include max-media("desktop"){
-        grid-template-columns:  15rem auto 16rem 16rem 15rem;
-    } */
-/*     @include max-media("mobile"){
-        grid-template-columns:  1fr;
-        padding-bottom: 2rem;
-    } */
-/*     @include min-media("mobile-down"){
-        grid-template-columns:  1rem auto 0rem 20rem 1rem; */
-/*         background: red; */
-/*     }
-    @include min-media("laptop"){
-        grid-template-columns:  1rem auto 15rem 20rem 1rem;
-    } */
+
 
 
 
@@ -57,14 +44,17 @@
         justify-content: center;
             &--center{
                 grid-column: 2;
+                & img{
+                    width: 150px;
+                    @include media-min("mobile-down"){
+                        width: 200px;
+                    }
+                }
             }
             & img{
                 width: 150px;
-/*                 @include max-media("mobile"){
-                    width: 150px;
-                } */
                 @include media-min("mobile-down"){
-                    width: 300px;
+                    width: 250px;
                 }
             }
     }
