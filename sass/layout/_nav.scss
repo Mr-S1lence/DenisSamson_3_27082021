@@ -17,7 +17,7 @@
             flex-direction: row;
             justify-content: space-between;
         }
-        @include media-min("laptop"){
+        @include media-min("desktop"){
 
             justify-content: start;
         }

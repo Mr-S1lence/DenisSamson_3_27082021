@@ -6,7 +6,8 @@
     margin-bottom: 2rem;
     @include media-min("mobile-down"){
         justify-content: unset;
-        padding-left: 8.5rem;
+/*         padding-left: 8.5rem; */
+        padding-left: 17%;
         grid-row: 3;
         grid-column: span 5;
         margin-bottom: 0;

@@ -24,29 +24,34 @@
         }
     }
     &__functioning{
-        margin-right: 0;
         margin-bottom: 1rem;
-        width: 18rem;
+        width: 90%;
+        min-width: 0.5rem;
         height: 4rem;
         border-radius: 1rem;
         @include media-min("mobile-down"){
-            margin-right: 0;
             margin-bottom: 0;
-            width: 12rem;  
+            min-width: 10rem;  
+            width: 30%;
             height: 3rem;   
             padding-right: 0.5rem;       
         }
         @include media-min("laptop"){
-            width: 18rem;
-            margin-right: 3rem;
+            width: 25%;
         }
         @include media-min("laptop-down"){
+            width: 30%;
+        }
+        @include media-min("laptop-down"){
+            width: 25%;
             margin-right: 3rem;
         }
         background: $color-background-elements;
         & .fas{
+            min-width: 26px;
             color: $color-icon;
-            margin-right: 1rem;
+            margin: 0 0.3rem 0 0.3rem;
+/*             text-align: center; */
         }
         &:hover{
             background: $color-hover;

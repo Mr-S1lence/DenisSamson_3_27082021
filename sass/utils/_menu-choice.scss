@@ -5,7 +5,6 @@
     width: 100%;
     background-image:url("../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
     background-repeat: no-repeat;
-/*     background-attachment: fixed; */
     background-size: 100% auto;
     @include media-min("mobile-down"){
         align-items: center;
@@ -16,8 +15,6 @@
 }
 
 .menu{
-/*     width: 60rem; */
-   /*  height: 90rem; */
     background: $color-background-elements;
     margin-top: 12rem;
     border-top-right-radius: 2rem;
@@ -25,38 +22,34 @@
     padding: 1rem 0.5rem;
     @include media-min("mobile-down"){
         margin-top: unset;
-        border-top-right-radius: 5rem;
-        border-top-left-radius: 5rem;
         padding: 3rem;
     }
-/*     margin-top: 3%; */
     &__title{
         display: flex;
         justify-content: space-between;
         align-items: center;
         font-family: 'shrikhand-regular';
-        font-size: 1.8rem;
-        & h3{
-            font-size: 1.6rem;
+        font-size: 1.5rem;
+        padding-right: 1rem;
+        @include media-min("tablet-down"){
+            font-size: 1.8rem;
+            padding-right: 0;
         }
     }
 }
 
 .menu-board{
-/*     border: solid red 1px; */
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 2rem;
     margin: 2rem 0 2rem 0;
     @include media-min("mobile-down"){
-        margin: 3rem 1rem 3rem 1rem;
+        margin: 3rem 0 3rem 0;
     }
     @include media-min("tablet-down"){
-    grid-template-columns: repeat(2, 2fr);
-    grid-gap: 3rem;
-
+        grid-template-columns: repeat(2, 2fr);
+        grid-gap: 3rem;
     }
-
     &__part{
 /*         border: blue solid 1px;
         background: red; */
@@ -65,7 +58,7 @@
         color: gray;
     }
     &__underline{
-        width: 3rem;
+        width: 2rem;
         height: 3px;
         margin-top: 2px;
         background: #99e2d0;
@@ -77,26 +70,25 @@
             width: unset;
         }
         display: flex;
- /*        background: blue; */
         margin-top: 1rem;
         overflow: hidden;
         border-radius: 1rem;
         box-shadow: $box-shadow;
         opacity: 0;
-        animation: sub-part-slide 0.5s 0s linear forwards;
 
+        animation: sub-part-slide 0.5s 0s linear forwards;
         @for $i from 1 through 5{
             &:nth-child(#{$i}){
                 animation-delay: $i * 150ms;
             }
+
         }
+
         & > div:first-child{
             width: 100%;
             display: flex;
             flex-direction: column;
-/*             padding: 2%; */
             background: white;
-/*             border-radius: 1rem 0 0 1rem; */
             & div{
                 display: flex;
                 justify-content: space-between;
@@ -112,15 +104,14 @@
         }
         & p{
             margin: 0.5rem 0.5rem 0.5rem 0.5rem;
-/*             margin: 1rem; */
             font-size: 0.9rem;
         }
         @include media-min("mobile-down"){
-            & p{
-                margin: 0.5rem 1rem 1rem 1rem; 
-            }
             & h3{
                 margin: 1rem 1rem 0rem 1rem;
+            }
+            & p{
+                margin: 0.5rem 1rem 1rem 1rem; 
             }
         }
         & p:first-child{
@@ -129,7 +120,6 @@
             text-overflow: ellipsis;
         }
         &:hover{
-
             cursor: pointer;
             & .container-icone-check{
                 margin-right: 0;
@@ -137,15 +127,13 @@
             }
             & > div:first-child{
                 width: 80%;
-                transition: 0.5s ease-in-out;
-                
+                transition: 0.5s ease-in-out;               
             }
             & .icon-check{
                 animation: menu-choice 0.5s ease-in-out forwards;
             }
         }
     }
-
 }
 
 .container-icone-check{
