@@ -15,7 +15,7 @@
     @include media-min("laptop-down"){
         padding: 1rem 10rem 1rem 10rem;
     }
-    @include media-min("desktop"){
+    @include media-min-px(1900px){
         padding: 1rem 26rem 1rem 26rem;
     }
 }
@@ -23,7 +23,7 @@
 @mixin margin-content{
     margin: auto 0rem auto 0rem;
     @include media-min("mobile-down"){
-        margin: 0 2rem 2rem 2rem;
+        margin: 0 1rem 2rem 1rem;
     }    
 /*     @include max-media("mobile"){
         margin: auto 0rem auto 0rem;

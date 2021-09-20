@@ -26,32 +26,29 @@
     &__functioning{
         margin-bottom: 1rem;
         width: 90%;
-        min-width: 0.5rem;
+        min-width: 180px;
+        max-width: 290px;
         height: 4rem;
         border-radius: 1rem;
-        @include media-min("mobile-down"){
+        @include media-min-px(680px){
             margin-bottom: 0;
-            min-width: 10rem;  
+            margin-right: 1rem;
             width: 30%;
             height: 3rem;   
             padding-right: 0.5rem;       
         }
         @include media-min("laptop"){
             width: 25%;
+            margin-right: unset;
         }
         @include media-min("laptop-down"){
             width: 30%;
-        }
-        @include media-min("laptop-down"){
-            width: 25%;
-            margin-right: 3rem;
         }
         background: $color-background-elements;
         & .fas{
             min-width: 26px;
             color: $color-icon;
             margin: 0 0.3rem 0 0.3rem;
-/*             text-align: center; */
         }
         &:hover{
             background: $color-hover;
@@ -64,7 +61,6 @@
         cursor: pointer;
     }
 }
-
 
 .numbering{
     position: absolute;

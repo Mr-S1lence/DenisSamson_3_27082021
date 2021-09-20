@@ -5,8 +5,7 @@
     padding-top: 1rem;
     background: $color-background-elements;
     @include media-min("mobile-down"){
-        grid-template-columns:  0 auto auto 16rem 2rem;      
-/*         justify-content: space-between; */
+        grid-template-columns:  0 auto auto 16rem 2rem;
         padding-bottom: unset;
     }
     @include media-min("laptop"){
@@ -30,9 +29,6 @@
         justify-content: center;
             &--center{
                 grid-column: 2;
-/*                 & img{
-                    width: 200px;
-                } */
                 & img{
                     width: 150px;
                     @include media-min("mobile-down"){

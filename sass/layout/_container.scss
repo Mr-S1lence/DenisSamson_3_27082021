@@ -11,10 +11,9 @@ main{
     grid-template-columns: 1fr;
     @include margin-content;
     margin-bottom: 3rem;
-/*     margin-top: 2rem; */
     grid-column-gap: 6rem;
     grid-row-gap: 1rem;
-    @include media-min("mobile-down"){
+    @include media-min-px(630px){
         grid-template-columns: repeat(2, 2fr);
         grid-gap: 2rem;
     }

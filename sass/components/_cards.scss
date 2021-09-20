@@ -2,12 +2,14 @@ $cards-border-radius: 1rem;
 
 .card{
     width: 100%;
+    max-width: 370px;
     margin: auto;
     background: white;
     box-shadow: $box-shadow;
     border-radius: $cards-border-radius;
     &__img{
         position: relative;
+        min-width: 260px;
         height: 14rem;
         overflow: hidden;
         border-top-left-radius: $cards-border-radius;
@@ -27,7 +29,7 @@ $cards-border-radius: 1rem;
         position: absolute;
         top: 1rem;
         right: 1rem;    
-        background: #99e2d0;
+        background: $color-tertiary;
         z-index: 1;
         border-radius: 0.3rem;
         padding: 0.5rem 1rem 0.5rem 1rem;
