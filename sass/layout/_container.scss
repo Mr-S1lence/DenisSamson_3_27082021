@@ -1,5 +1,7 @@
 main{
     @include padding-main;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     background: $color-background-elements;
          @include media-min-height(1280px){
         padding-bottom: 3rem;
@@ -7,19 +9,26 @@ main{
 }
 
 .container{
-    display: grid;
-    grid-template-columns: 1fr;
     @include margin-content;
+}
+
+.container__grid{
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr);
+    place-content: center;
+    margin: auto;
+    grid-gap: 2rem;
+
+/*     width: 100%; */
     margin-bottom: 3rem;
-    grid-column-gap: 6rem;
-    grid-row-gap: 1rem;
-    @include media-min-px(630px){
-        grid-template-columns: repeat(2, 2fr);
-        grid-gap: 2rem;
+
+    @include media-min-px("610px"){
+        grid-template-columns: 2fr 2fr;
+        place-content: space-between;
     }
     @include media-min("laptop-down"){
-            grid-row-gap: 5rem;
-            grid-column-gap: 6rem;
+        column-gap: 5rem;
+        row-gap: 4rem;
     }
 }
 

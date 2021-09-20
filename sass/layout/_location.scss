@@ -1,63 +1,54 @@
+.location-bkgrd{
+    width: 0;
+    height: 0;
+    @include media-min("mobile-down"){
+        position: absolute;
+        z-index: 0;
+        bottom: 0;
+        height: 3rem;
+        width: 100%;
+        background: $color-background-location;
+        box-shadow: inset 0 7px 9px -7px rgba(0,0,0,0.4);
+    }
+}
+
 .location{
+    z-index: 1;
     grid-column:1;
     grid-row: 2;
-    padding-left: 0;
     justify-content: center;
     margin-bottom: 2rem;
+    background: $color-background-location;
+    box-shadow: inset 0 7px 9px -7px rgba(0,0,0,0.4);
     @include media-min("mobile-down"){
-        justify-content: unset;
-/*         padding-left: 8.5rem; */
-        padding-left: 17%;
-        grid-row: 3;
-        grid-column: span 5;
+        background: unset;
+        box-shadow: unset;
+        grid-row: 4;
+        grid-column: 1;
         margin-bottom: 0;
+        margin-top: 2rem;
     }
-    @include media-min("laptop"){
+/*     @include media-min("laptop"){
         padding-left: 10.5rem;
     }
     @include media-min("laptop-down"){
         padding-left: 22rem;
     }
     @include media-min("desktop"){
-/*         grid-row: 3;
-        grid-column: span 5; */
         padding-left: 37rem;
-    }
-/* @include max-media("desktop"){
-    padding-left: 22rem;
-} */
-/* @include min-media("mobile-down"){
-    padding-left: 8.5rem;
-} */
-/* @include min-media("laptop"){
-    padding-left: 10.5rem;
-} */
-
-/*     @include max-media("mobile"){
-        grid-column:1;
-        grid-row: 2;
-        padding-left: 0;
-        justify-content: center;
-        margin-bottom: 2rem;
     } */
     height: 3rem;
-    margin-top: 1rem;
-    background: $color-background-location;
     display: flex;
-    box-shadow: inset 0 7px 9px -7px rgba(0,0,0,0.4);
+
     & > div{
         display: flex;
     }
     &__icon{
-/*         width: 3rem; */
-/*         background: red; */
         display: flex;
         justify-content: center;
         align-items: center;
     }
     &__name{
-/*         width: 10rem; */
-/*         background: blue; */
         display: flex;
         padding-left: 0.5rem;
         align-items: center;

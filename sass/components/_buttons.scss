@@ -6,9 +6,9 @@
     height: 2.5rem;
     &__explorer{
         justify-content: center;
-        width: 12rem;    
+        max-width: 12rem;    
         margin: auto;
-        margin-bottom: 1rem;
+/*         margin-bottom: 1rem; */
         background: linear-gradient($color-secondary, $color-primary);
         color: white;
         &:hover{
@@ -16,6 +16,7 @@
             box-shadow: $box-shadow-hover;
         }
         &--command{
+            width: 12rem;
             margin: auto;
             @include media-min("laptop"){
                 margin-right: 0;
@@ -25,30 +26,41 @@
     }
     &__functioning{
         margin-bottom: 1rem;
-        width: 90%;
-        min-width: 180px;
-        max-width: 290px;
+        width: 100%;
+        min-width: 90px;
+/*         max-width: 290px; */
         height: 4rem;
         border-radius: 1rem;
-        @include media-min-px(680px){
+        @include media-min("mobile-down"){
             margin-bottom: 0;
-            margin-right: 1rem;
-            width: 30%;
+/*             margin-right: 1rem; */
             height: 3rem;   
-            padding-right: 0.5rem;       
+/*             padding-right: 2%;    */    
         }
         @include media-min("laptop"){
-            width: 25%;
             margin-right: unset;
         }
         @include media-min("laptop-down"){
-            width: 30%;
         }
         background: $color-background-elements;
         & .fas{
-            min-width: 26px;
+            font-size: 1.2rem;
+            text-align: center;
+            min-width: 24px;
             color: $color-icon;
-            margin: 0 0.3rem 0 0.3rem;
+/*             margin: 0 0.3rem 0 0.3rem; */
+        }
+        & div:nth-child(2n){
+
+            margin: 0 5% 0 5%;
+            @include media-min("mobile-down"){
+/*             background: red; */
+            margin: 0;
+            }
+        }
+        & span{
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
         }
         &:hover{
             background: $color-hover;

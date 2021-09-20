@@ -558,7 +558,7 @@ body {
 }
 
 h2 {
-  /*     font-size:1.5rem; */
+  margin-bottom: 2rem;
   font-size: 1.1rem;
 }
 
@@ -602,9 +602,9 @@ body {
 }
 .btn__explorer {
   justify-content: center;
-  width: 12rem;
+  max-width: 12rem;
   margin: auto;
-  margin-bottom: 1rem;
+  /*         margin-bottom: 1rem; */
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
 }
@@ -613,6 +613,7 @@ body {
   box-shadow: 0px 12px 5px -6px rgba(0, 0, 0, 0.22);
 }
 .btn__explorer--command {
+  width: 12rem;
   margin: auto;
 }
 @media screen and (min-width: 1024px) {
@@ -623,37 +624,45 @@ body {
 }
 .btn__functioning {
   margin-bottom: 1rem;
-  width: 90%;
-  min-width: 180px;
-  max-width: 290px;
+  width: 100%;
+  min-width: 90px;
+  /*         max-width: 290px; */
   height: 4rem;
   border-radius: 1rem;
   background: #f6f6f6;
 }
-@media screen and (min-width: 680px) {
+@media screen and (min-width: 500px) {
   .btn__functioning {
     margin-bottom: 0;
-    margin-right: 1rem;
-    width: 30%;
+    /*             margin-right: 1rem; */
     height: 3rem;
-    padding-right: 0.5rem;
+    /*             padding-right: 2%;    */
   }
 }
 @media screen and (min-width: 1024px) {
   .btn__functioning {
-    width: 25%;
     margin-right: unset;
   }
 }
-@media screen and (min-width: 1280px) {
-  .btn__functioning {
-    width: 30%;
+.btn__functioning .fas {
+  font-size: 1.2rem;
+  text-align: center;
+  min-width: 24px;
+  color: #7e7e7e;
+  /*             margin: 0 0.3rem 0 0.3rem; */
+}
+.btn__functioning div:nth-child(2n) {
+  margin: 0 5% 0 5%;
+}
+@media screen and (min-width: 500px) {
+  .btn__functioning div:nth-child(2n) {
+    /*             background: red; */
+    margin: 0;
   }
 }
-.btn__functioning .fas {
-  min-width: 26px;
-  color: #7e7e7e;
-  margin: 0 0.3rem 0 0.3rem;
+.btn__functioning span {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 .btn__functioning:hover {
   background: #f5edff;
@@ -1239,36 +1248,91 @@ body {
   }
 }
 .header {
+  background: #f6f6f6;
+  position: relative;
+}
+.header__grid {
   display: grid;
   grid-template-columns: 1fr;
   padding-bottom: 2rem;
-  padding-top: 1rem;
-  background: #f6f6f6;
 }
 @media screen and (min-width: 500px) {
-  .header {
-    grid-template-columns: 0 auto auto 16rem 2rem;
-    padding-bottom: unset;
+  .header__grid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0;
+    padding-top: 2rem;
+    grid-template-columns: 2fr 2fr 2fr;
   }
 }
-@media screen and (min-width: 1024px) {
-  .header {
-    grid-template-columns: 1rem auto 15rem 20rem 1rem;
+@media screen and (min-width: 500px) and (min-width: 500px) {
+  .header__grid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    /*         background: yellow; */
   }
 }
-@media screen and (min-width: 1280px) {
-  .header {
-    grid-template-columns: 15rem auto 15rem 16rem 15rem;
+@media screen and (min-width: 500px) and (min-width: 900px) {
+  .header__grid {
+    padding-left: 10%;
+    padding-right: 10%;
+    /*         background: orange; */
   }
+}
+@media screen and (min-width: 500px) and (min-width: 1024px) {
+  .header__grid {
+    padding-left: 10%;
+    padding-right: 10%;
+    /*                 background: red; */
+  }
+}
+@media screen and (min-width: 500px) and (min-width: 1280px) {
+  .header__grid {
+    padding-left: 15%;
+    padding-right: 15%;
+    /*         background: blue; */
+  }
+}
+@media screen and (min-width: 500px) and (min-width: 1440px) {
+  .header__grid {
+    padding-left: 25%;
+    padding-right: 25%;
+    /*         background: green; */
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__grid {
+    margin: 0 0rem 0 0rem;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 500px) {
+  .header__grid {
+    margin: 0 5% 0rem 5%;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1280px) {
+  .header__grid {
+    margin: 0 5rem 0rem 5rem;
+  }
+}
+.header__grid--center {
+  grid-template-columns: 3fr 3fr 3fr;
+  padding: 1rem 0rem 1rem 0rem;
+  align-items: center;
+  text-align: center;
 }
 @media screen and (min-width: 1440px) {
-  .header {
-    grid-template-columns: 30rem auto 18rem 18rem 30rem;
+  .header__grid--center {
+    padding: 1rem 20rem 1rem 20rem;
   }
+}
+.header__grid fa-arrow-left {
+  grid-column: 1;
 }
 .header__logo {
   grid-column: 1;
   grid-row: 1;
+  margin: 1rem 0 1rem 0;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -1276,7 +1340,9 @@ body {
 }
 @media screen and (min-width: 500px) {
   .header__logo {
-    grid-column: 2;
+    grid-column: 1;
+    margin: 0;
+    /*             padding-top: 1rem; */
   }
 }
 .header__logo--center {
@@ -1309,19 +1375,24 @@ body {
   }
 }
 .header__subhead {
+  /*         height: 3rem; */
   grid-column: 1;
   grid-row: 3;
-  width: 70%;
-  min-width: 19rem;
+  width: 13rem;
+  font-size: 1.3rem;
   margin: auto;
   text-align: center;
 }
 @media screen and (min-width: 500px) {
   .header__subhead {
     grid-row: 2;
-    grid-column: 2;
-    margin: 0;
-    width: unset;
+    grid-column: 1;
+    position: relative;
+    top: 0;
+    font-size: 1.1rem;
+    width: 19rem;
+    min-width: 19rem;
+    /*             margin-bottom: 1rem; */
   }
 }
 .header__explorer {
@@ -1330,6 +1401,7 @@ body {
   width: 70%;
   max-width: 16rem;
   margin: auto;
+  color: #7e7e7e;
   text-align: center;
 }
 @media screen and (min-width: 500px) {
@@ -1338,172 +1410,177 @@ body {
     grid-column: 4;
     width: unset;
   }
-}
-.header--center {
-  grid-template-columns: 3fr 3fr 3fr;
-  padding: 1rem 0rem 1rem 0rem;
-  align-items: center;
-  text-align: center;
-}
-@media screen and (min-width: 1440px) {
-  .header--center {
-    padding: 1rem 20rem 1rem 20rem;
+  .header__explorer p {
+    margin-top: 0;
   }
 }
-.header fa-arrow-left {
-  grid-column: 1;
+
+.location-bkgrd {
+  width: 0;
+  height: 0;
+}
+@media screen and (min-width: 500px) {
+  .location-bkgrd {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    height: 3rem;
+    width: 100%;
+    background: #eaeaea;
+    box-shadow: inset 0 7px 9px -7px rgba(0, 0, 0, 0.4);
+  }
 }
 
 .location {
+  z-index: 1;
   grid-column: 1;
   grid-row: 2;
-  padding-left: 0;
   justify-content: center;
   margin-bottom: 2rem;
-  /* @include max-media("desktop"){
-      padding-left: 22rem;
-  } */
-  /* @include min-media("mobile-down"){
-      padding-left: 8.5rem;
-  } */
-  /* @include min-media("laptop"){
-      padding-left: 10.5rem;
-  } */
-  /*     @include max-media("mobile"){
-          grid-column:1;
-          grid-row: 2;
-          padding-left: 0;
-          justify-content: center;
-          margin-bottom: 2rem;
+  background: #eaeaea;
+  box-shadow: inset 0 7px 9px -7px rgba(0, 0, 0, 0.4);
+  /*     @include media-min("laptop"){
+          padding-left: 10.5rem;
+      }
+      @include media-min("laptop-down"){
+          padding-left: 22rem;
+      }
+      @include media-min("desktop"){
+          padding-left: 37rem;
       } */
   height: 3rem;
-  margin-top: 1rem;
-  background: #eaeaea;
   display: flex;
-  box-shadow: inset 0 7px 9px -7px rgba(0, 0, 0, 0.4);
 }
 @media screen and (min-width: 500px) {
   .location {
-    justify-content: unset;
-    /*         padding-left: 8.5rem; */
-    padding-left: 17%;
-    grid-row: 3;
-    grid-column: span 5;
+    background: unset;
+    box-shadow: unset;
+    grid-row: 4;
+    grid-column: 1;
     margin-bottom: 0;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .location {
-    padding-left: 10.5rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .location {
-    padding-left: 22rem;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .location {
-    /*         grid-row: 3;
-            grid-column: span 5; */
-    padding-left: 37rem;
+    margin-top: 2rem;
   }
 }
 .location > div {
   display: flex;
 }
 .location__icon {
-  /*         width: 3rem; */
-  /*         background: red; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .location__name {
-  /*         width: 10rem; */
-  /*         background: blue; */
   display: flex;
   padding-left: 0.5rem;
   align-items: center;
 }
 
 .functioning {
+  padding-left: 1rem;
+  padding-right: 1rem;
   display: flex;
   flex-direction: column;
-  padding: 1rem 1rem 1rem 1rem;
-  /*     @include max-media("desktop"){
-          padding: 1rem 10rem 1rem 10rem;
-      } */
-  /*         @include max-media("mobile"){
-          padding: 1rem 1rem 1rem 1rem;
-      } */
-  /*     @include min-media("mobile-down"){
-          padding: 1rem 1rem 1rem 1rem;
-      } */
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+@media screen and (min-width: 500px) {
+  .functioning {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    /*         background: yellow; */
+  }
+}
+@media screen and (min-width: 900px) {
+  .functioning {
+    padding-left: 10%;
+    padding-right: 10%;
+    /*         background: orange; */
+  }
+}
+@media screen and (min-width: 1024px) {
+  .functioning {
+    padding-left: 10%;
+    padding-right: 10%;
+    /*                 background: red; */
+  }
 }
 @media screen and (min-width: 1280px) {
   .functioning {
-    padding: 1rem 10rem 1rem 10rem;
+    padding-left: 15%;
+    padding-right: 15%;
+    /*         background: blue; */
   }
 }
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 1440px) {
   .functioning {
-    padding: 1rem 26rem 1rem 26rem;
+    padding-left: 25%;
+    padding-right: 25%;
+    /*         background: green; */
   }
 }
 .functioning nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto 0rem auto 0rem;
-  /*     @include max-media("mobile"){
-          margin: auto 0rem auto 0rem;
-      } */
-  /*     @include min-media("mobile-down"){
-          margin: 0 2rem 2rem 2rem;
-      } */
-  /*         @include media-min("desktop"){
-              justify-content: start;
-          } */
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr);
+  grid-gap: 1rem;
+  margin: 0 0rem 0 0rem;
 }
 @media screen and (min-width: 500px) {
   .functioning nav {
-    margin: 0 1rem 2rem 1rem;
+    margin: 0 5% 0rem 5%;
   }
 }
 @media screen and (min-width: 1280px) {
   .functioning nav {
-    margin: 0 5rem 2rem 5rem;
+    margin: 0 5rem 0rem 5rem;
   }
 }
-@media screen and (min-width: 680px) {
+@media screen and (min-width: 610px) {
   .functioning nav {
-    flex-direction: row;
-    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
   }
 }
 
 main {
-  padding: 1rem 1rem 1rem 1rem;
-  /*     @include max-media("desktop"){
-          padding: 1rem 10rem 1rem 10rem;
-      } */
-  /*         @include max-media("mobile"){
-          padding: 1rem 1rem 1rem 1rem;
-      } */
-  /*     @include min-media("mobile-down"){
-          padding: 1rem 1rem 1rem 1rem;
-      } */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   background: #f6f6f6;
+}
+@media screen and (min-width: 500px) {
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    /*         background: yellow; */
+  }
+}
+@media screen and (min-width: 900px) {
+  main {
+    padding-left: 10%;
+    padding-right: 10%;
+    /*         background: orange; */
+  }
+}
+@media screen and (min-width: 1024px) {
+  main {
+    padding-left: 10%;
+    padding-right: 10%;
+    /*                 background: red; */
+  }
 }
 @media screen and (min-width: 1280px) {
   main {
-    padding: 1rem 10rem 1rem 10rem;
+    padding-left: 15%;
+    padding-right: 15%;
+    /*         background: blue; */
   }
 }
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 1440px) {
   main {
-    padding: 1rem 26rem 1rem 26rem;
+    padding-left: 25%;
+    padding-right: 25%;
+    /*         background: green; */
   }
 }
 @media screen and (height: 1280px) {
@@ -1513,54 +1590,57 @@ main {
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 1fr;
-  margin: auto 0rem auto 0rem;
-  /*     @include max-media("mobile"){
-          margin: auto 0rem auto 0rem;
-      } */
-  /*     @include min-media("mobile-down"){
-          margin: 0 2rem 2rem 2rem;
-      } */
-  margin-bottom: 3rem;
-  grid-column-gap: 6rem;
-  grid-row-gap: 1rem;
+  margin: 0 0rem 0 0rem;
 }
 @media screen and (min-width: 500px) {
   .container {
-    margin: 0 1rem 2rem 1rem;
+    margin: 0 5% 0rem 5%;
   }
 }
 @media screen and (min-width: 1280px) {
   .container {
-    margin: 0 5rem 2rem 5rem;
+    margin: 0 5rem 0rem 5rem;
   }
 }
-@media screen and (min-width: 630px) {
-  .container {
-    grid-template-columns: repeat(2, 2fr);
-    grid-gap: 2rem;
+
+.container__grid {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr);
+  place-content: center;
+  margin: auto;
+  grid-gap: 2rem;
+  /*     width: 100%; */
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 610px) {
+  .container__grid {
+    grid-template-columns: 2fr 2fr;
+    place-content: space-between;
   }
 }
 @media screen and (min-width: 1280px) {
-  .container {
-    grid-row-gap: 5rem;
-    grid-column-gap: 6rem;
+  .container__grid {
+    column-gap: 5rem;
+    row-gap: 4rem;
   }
 }
 
 .card {
-  width: 100%;
-  max-width: 370px;
-  margin: auto;
+  /*     width: 30rem; */
+  /*     max-width: 370px; */
+  /*     margin: auto; */
+  /*     min-width: 20rem; */
+  /*     max-width: 25rem; */
+  /*    width: 25rem; */
   background: white;
   box-shadow: 0px 12px 5px -6px rgba(0, 0, 0, 0.17);
   border-radius: 1rem;
 }
 .card__img {
   position: relative;
-  min-width: 260px;
+  /*         min-width: 260px; */
   height: 14rem;
+  max-height: 14rem;
   overflow: hidden;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
@@ -1597,7 +1677,7 @@ main {
   display: flex;
   justify-content: space-between;
   margin-top: -1rem;
-  padding: 0 2rem 0 2rem;
+  padding: 0 1rem 0 1rem;
   font-size: 1.3rem;
 }
 @media screen and (min-width: 500px) {
@@ -1616,26 +1696,45 @@ main {
   flex-direction: column;
   justify-content: space-between;
   background: #353535;
-  padding: 1rem 1rem 1rem 1rem;
-  /*     @include max-media("desktop"){
-          padding: 1rem 10rem 1rem 10rem;
-      } */
-  /*         @include max-media("mobile"){
-          padding: 1rem 1rem 1rem 1rem;
-      } */
-  /*     @include min-media("mobile-down"){
-          padding: 1rem 1rem 1rem 1rem;
-      } */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   font-size: 1.8rem;
+}
+@media screen and (min-width: 500px) {
+  .footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    /*         background: yellow; */
+  }
+}
+@media screen and (min-width: 900px) {
+  .footer {
+    padding-left: 10%;
+    padding-right: 10%;
+    /*         background: orange; */
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer {
+    padding-left: 10%;
+    padding-right: 10%;
+    /*                 background: red; */
+  }
 }
 @media screen and (min-width: 1280px) {
   .footer {
-    padding: 1rem 10rem 1rem 10rem;
+    padding-left: 15%;
+    padding-right: 15%;
+    /*         background: blue; */
   }
 }
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 1440px) {
   .footer {
-    padding: 1rem 26rem 1rem 26rem;
+    padding-left: 25%;
+    padding-right: 25%;
+    /*         background: green; */
   }
 }
 .footer > :last-child {

@@ -1,37 +1,45 @@
-@mixin padding-main{
-    padding: 1rem 1rem 1rem 1rem;
-    @include media-min("mobile-down"){
 
+@mixin padding-lft-rgt($key1){
+    padding-left: $key1;
+    padding-right: $key1;
+}
+
+@mixin padding-top-btm($key1){
+    padding-top: $key1;
+    padding-bottom: $key1;
+}
+
+@mixin padding-main{
+    @include padding-lft-rgt(1rem);
+    @include media-min("mobile-down"){
+        @include padding-lft-rgt(1rem);
+/*         background: yellow; */
     }
-/*     @include max-media("desktop"){
-        padding: 1rem 10rem 1rem 10rem;
-    } */
-/*         @include max-media("mobile"){
-        padding: 1rem 1rem 1rem 1rem;
-    } */
-/*     @include min-media("mobile-down"){
-        padding: 1rem 1rem 1rem 1rem;
-    } */
+    @include media-min("tablet-down"){
+        @include padding-lft-rgt(10%);
+/*         background: orange; */
+    }
+    @include media-min("laptop"){
+        @include padding-lft-rgt(10%);
+/*                 background: red; */
+    }
     @include media-min("laptop-down"){
-        padding: 1rem 10rem 1rem 10rem;
+        @include padding-lft-rgt(15%);
+/*         background: blue; */
+        
     }
-    @include media-min-px(1900px){
-        padding: 1rem 26rem 1rem 26rem;
+    @include media-min("desktop"){
+        @include padding-lft-rgt(25%);
+/*         background: green; */
     }
 }
 
 @mixin margin-content{
-    margin: auto 0rem auto 0rem;
+    margin: 0 0rem 0 0rem;
     @include media-min("mobile-down"){
-        margin: 0 1rem 2rem 1rem;
+        margin: 0 5% 0rem 5%;
     }    
-/*     @include max-media("mobile"){
-        margin: auto 0rem auto 0rem;
-    } */
-/*     @include min-media("mobile-down"){
-        margin: 0 2rem 2rem 2rem;
-    } */
     @include media-min("laptop-down"){
-        margin: 0 5rem 2rem 5rem;
+        margin: 0 5rem 0rem 5rem;
     }
 }
