@@ -4,6 +4,8 @@ $cards-border-radius: 1rem;
     background: white;
     box-shadow: $box-shadow;
     border-radius: $cards-border-radius;
+    opacity: 0;
+    animation: cards-slide 0.5s 1.7s linear forwards;
     &__img{
         position: relative;
         height: 14rem;
@@ -17,10 +19,16 @@ $cards-border-radius: 1rem;
             width: 100%;
             height: 110%;
             object-fit: cover;
+            transition: transform .9s;
             @include media-min("mobile-down"){
                 height: 125%;
             }
         }
+    }
+    &:hover img{
+        -ms-transform: scale(1.1); /* IE 9 */
+        -webkit-transform: scale(1.1); /* Safari 3-8 */
+        transform: scale(1.1);            
     }
     &__new-label{
         position: absolute;
@@ -51,5 +59,15 @@ $cards-border-radius: 1rem;
         & p{
             margin-top: 0.5rem;
         }
+    }
+}
+
+@keyframes cards-slide{
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }100%{
+        opacity: 1;
+        transform: translateY(0);
     }
 }
