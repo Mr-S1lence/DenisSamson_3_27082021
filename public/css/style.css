@@ -441,7 +441,6 @@ body {
   text-align: center;
   background-color: white;
   margin: 0;
-  transform: opacity(0);
   animation: loader-start 1.5s 1.2s forwards, loader-end 0.01s 2.7s forwards;
 }
 
