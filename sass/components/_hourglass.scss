@@ -1,36 +1,21 @@
 $hourglass-size: 100px; /* 164px */ /* 200px */
 
 
-
 $container-hourglass-relative-width: math.div($hourglass-size, 2); /* 100px */ /* <<<< A MODIFIER */
 $container-hourglass-relative-height: math.div((40*$hourglass-size), 100); /* 80px */
-
 
 $half-hourglass-width: math.div(10*$container-hourglass-relative-width, 100);
 $half-hourglass-border-bottom: math.div($hourglass-size, 2);
 $half-hourglass-border: math.div(45*$container-hourglass-relative-width, 100);
 
-
-
-
-
 $half-hourglass-position-left: round(math.div($container-hourglass-relative-width, 2));
 $half-hourglass-top-position-left: math.div($half-hourglass-position-left, -10);
-
-@debug "container-hourglass-relative-width: #{$container-hourglass-relative-width}";
-@debug "container-hourglass-relative-height: #{$container-hourglass-relative-height}";
-@debug "$half-hourglass-position-left: #{$half-hourglass-position-left}";
-@debug "$half-hourglass-top-position-left: #{$half-hourglass-top-position-left}";
-@debug "$half-hourglass-width: #{$half-hourglass-width}";
-@debug "$half-hourglass-border-bottom: #{$half-hourglass-border-bottom}";
-@debug "half-hourglass-border: #{$half-hourglass-border}";
 
 
 $anim-duration: 1.50s;
 
 
 .container-hourglass{
- /*    position: relative; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,22 +24,14 @@ $anim-duration: 1.50s;
     width: $hourglass-size;
     height: $hourglass-size;
     margin: auto;
-/*     background: $color-primary; */
-border: solid 10px $color-primary;
+    border: solid 10px $color-primary;
     animation: hourglass-rotate 1.20s cubic-bezier(.99,.16,.25,1.01) backwards, 
     hourglass-rotate-reverse 1.20s 1.20s cubic-bezier(.99,.16,.25,1.01) forwards
-/*    , hourglass-disappears 1.20s 1.20s cubic-bezier(.99,.16,.25,1.01)
-    forwards */
     ; 
-/*     background: blue; */
     &__relative{
         position: relative;
-/*         width: 100px; */
-/*         height: 80px; */
-          width: $container-hourglass-relative-width; /* 110px */ /* 100px */
-         height: $container-hourglass-relative-height;  /* 80px */
-/*         background: red; */
-/*         border: solid red 1px; */
+        width: $container-hourglass-relative-width; /* 110px */ /* 100px */
+        height: $container-hourglass-relative-height;  /* 80px */
     }
 }
 
@@ -79,31 +56,17 @@ border: solid 10px $color-primary;
     }
 }
 
-@keyframes hourglass-disappears{
-    0%{
-        transform: scale(1.50);
-    }100%{
-/*         transform: rotate(-999deg); */
-        transform: scale(0);
-    }
-}
-
 .hourglass{
     position: absolute;
     z-index: -2;
     top: 0;
     height: 0;
-/*     width:10px; */
     width: $half-hourglass-width; /* 10px */
-/*     border-bottom: 80px solid $color-secondary; */
     border-bottom: $container-hourglass-relative-height solid $color-secondary; /* 80px */
-/*     border-left: 45px solid transparent;
-    border-right: 45px solid transparent; */
     border-left: $half-hourglass-border solid transparent; /* 50px */
     border-right: $half-hourglass-border solid transparent; /* 50px */
     border-bottom-left-radius: 35%;
     border-bottom-right-radius: 35%;    
-/*     transform: translateX(-50%); */
     &--top{
         top: 0px;
         transform: rotate(180deg);
@@ -116,27 +79,15 @@ $sand-border: math.div((44*$container-hourglass-relative-width),100);
 $sand-width: math.div(4*$container-hourglass-relative-width, 100);
 $sand-position-right: math.div(4*$container-hourglass-relative-width, 100);
 
-@debug "$sand-bottom-top-border: #{$sand-bottom-top-border}";
-@debug "$sand-bottom-top-position: #{$sand-bottom-top-position}";
-@debug "$sand-border: #{$sand-border}";
-@debug "$sand-width: #{$sand-width}";
-@debug "$sand-position-right: #{$sand-position-right}";
-
 .sand{
     position: absolute;
     z-index: -1;
-/*     bottom: 5px; */
     bottom: $sand-bottom-top-position; /* 5px */
     left: unset;
     right: $sand-position-right;
     height: 0;
-/*     width: 4px; */
     width: $sand-width; /* 4px */
-/*     right: 0; */
-/*     border-bottom: 50px solid $color-primary;     */ 
     border-bottom: $sand-bottom-top-border solid $color-primary; /* 50px */
-/*     border-left: 48px solid transparent;
-    border-right: 48px solid transparent; */
     border-left: $sand-border solid transparent; /* 48px */
     border-right: $sand-border solid transparent; /* 48px */
     border-bottom-left-radius: 35%;
@@ -149,14 +100,13 @@ $sand-position-right: math.div(4*$container-hourglass-relative-width, 100);
         position: absolute;
         z-index: 1;
         bottom: unset;
-/*         top: 5px; */
         top: $sand-bottom-top-position; /* 5px */
         border-bottom: unset;
         border-top: $sand-bottom-top-border solid $color-primary; /* 50px */
         border-top-left-radius: 35%;
         border-top-right-radius: 35%;
         transform: scale(0);
-        transform-origin: top;           /*  <<<<<<<<<<<<================================== */
+        transform-origin: top;    
         animation: sand-filling 0.80s 0.40s    
         backwards
         ;
@@ -170,16 +120,6 @@ $sand-border-right: math.div((40*$container-hourglass-relative-width),100);
 $sand-translate:  math.div((20*$container-hourglass-relative-height),100);
 $sand-rotate-position-right: math.div((6*$container-hourglass-relative-width),100);
 
-
-@debug "$border-bottom-sand-rotate-1: #{$border-bottom-sand-rotate-1}";
-@debug "$border-bottom-sand-rotate-2: #{$border-bottom-sand-rotate-2}";
-
-@debug "$sand-border-left: #{$sand-border-left}";
-@debug "$sand-border-right: #{$sand-border-right}";
-@debug "$sand-translate: #{$sand-translate}";
-@debug "$sand-rotate-position-right: #{$sand-position-right}";
-
-
 @keyframes sand-rotate {
     0%{
         left: unset;
@@ -187,14 +127,12 @@ $sand-rotate-position-right: math.div((6*$container-hourglass-relative-width),10
     }
     20%{
         left: unset;
-        right: $sand-position-right;
-        
+        right: $sand-position-right;      
         border-bottom: $border-bottom-sand-rotate-1 solid $color-primary;
         border-left: $sand-border-left solid transparent;
         border-right: $sand-border-right solid transparent;
     }
-    30%{
-        
+    30%{       
         border-bottom: $border-bottom-sand-rotate-2 solid $color-primary;     
         border-left: $sand-border solid transparent; 
         border-right: $sand-border solid transparent; 
@@ -215,25 +153,18 @@ $sand-rotate-position-right: math.div((6*$container-hourglass-relative-width),10
     }
 }
 
-
 $flowing-sand-width: round(math.div((1*$container-hourglass-relative-width),100));
 $flowing-sand-position-left: math.div((49*$container-hourglass-relative-width),100);
 $flowing-sand-hight: math.div((42*$hourglass-size), 100);
-@debug "$flowing-sand-width: #{$flowing-sand-width}";
-@debug "$flowing-sand-position-left: #{$flowing-sand-position-left}";
-@debug "$flowing-sand-hight: #{$flowing-sand-hight}";
 
 .flowing-sand{
     z-index: 3;
     position: absolute;
     background: $color-primary;
-/* background: red; */
     top: $sand-bottom-top-position;
     left: $flowing-sand-position-left; 
     width: $flowing-sand-width;
     height: $flowing-sand-hight;
-/*     margin-left: 49px; */
-
     transform: scale(0);
     animation: flowing-sand 0.80s 0.38s forwards;    
 }
@@ -251,6 +182,5 @@ $flowing-sand-hight: math.div((42*$hourglass-size), 100);
     }100%{
         transform-origin: center;
         transform: scaleY(0);
-
     } 
 }

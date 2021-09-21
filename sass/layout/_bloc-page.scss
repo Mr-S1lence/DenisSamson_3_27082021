@@ -1,7 +1,4 @@
 .bloc-page{
-/*     max-width: 1440px;
-    margin: auto; */
-/*     box-sizing: border-box; */
 position: relative;
 width: 100%;
 }
@@ -18,15 +15,11 @@ width: 100%;
     display: flex;
     justify-content: center;
     text-align: center;
-/*     border: solid 5px blue; */
-/* background: white; */
-background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 1);
     margin: 0;
     transform: opacity(0);
     animation: loader-start 1.50s 1.20s forwards,
-    loader-end 0.01s 2.70s forwards
-    ;
-
+    loader-end 0.01s 2.70s forwards;
 }
 
 @keyframes loader-start{

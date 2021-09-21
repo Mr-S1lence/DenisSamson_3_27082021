@@ -1,149 +1,130 @@
-@use 'sass:math';
-$like-size: 30px;
-$like-size-elm: math.div($like-size, 2);
-
-$like-border-sz : 1px;
+$heart-size: 2rem;
+$like-border-sz: 1px;
+$like-hover-clr: $color-primary;
+$like-hover-clr-2nd: $color-secondary;
+$like-backgrd-clr: white;
 $like-border-clr : black;
 
-$like-backgrd-clr : $color-background-elements;
-$like-hover-clr: $color-primary;
+$heart-size-elm: math.div($heart-size, 2);
+$heart-size-elm-btm: calc($heart-size-elm - $like-border-sz);
 
-
-
-.like{
-    box-sizing: border-box;
-    width: $like-size;
-    height: $like-size;
-    position: relative;
-/*     border: solid 1px purple; */
-
+.like-container{
+    width: $heart-size;
+    height: $heart-size;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__relative{
+        margin-top: 15%;
+        position: relative;
+        width: $heart-size-elm;
+        height: $heart-size-elm;
+        transform: rotate(45deg);
+    }
     &:hover{
         cursor: pointer;
-        & .fill-heart{ 
-            animation: fill-heart 0.9s forwards;
+        & .heart__top-lft__hover{ 
+            animation: fill-heart-top-lft 0.9s forwards;
         }
-        & .fill-heart-right{ 
-            animation: fill-heart-right 0.9s forwards;
+        & .heart__top-rgt__hover{ 
+            animation: fill-heart-top-rgt 0.9s forwards;
         }
-        & .fill-heart-bottom{ 
-            animation: fill-heart-bottom 0.9s forwards;
+        & .heart__btm__hover{ 
+            animation: fill-heart-btm 0.9s forwards;
         }
     }
-
 }
 
 .heart{
     box-sizing: border-box;
     position: absolute;
-    width: $like-size-elm;
-    height: $like-size-elm;
+    width: $heart-size-elm;
+    height: $heart-size-elm;
+    border: solid $like-border-sz $like-border-clr;
     background: $like-backgrd-clr;
-   
-
-    &__top{
-        /* z-index: -1; */
-        border-radius: 50% 50% 0 50%;
-        transform: rotate(45deg);
-        border: $like-border-clr $like-border-sz solid;
-/*         border-left: $like-border-clr $like-border-sz solid;
-        border-bottom: $like-border-clr $like-border-sz solid; */
-        &__bkgrd{
+    &__top-rgt{
+        z-index: 3;
+        border-bottom: unset;
+        border-radius: 50% 50% 0 0;
+        left: 0;
+        top: -50%;
+        &__hover{
             border: transparent $like-border-sz solid;
-            z-index: 3;
+            z-index: 5;
             background: $like-hover-clr;
             background-clip: border-box;
-/*             border-radius: 50% 50% 0% 50%; */
             transform: scale(0);
         }
-
-        &--right{
-            /* z-index: -2; */
-            left: 40%;
-            border-bottom: unset;
-            border-right: $like-border-clr $like-border-sz solid;
-            &__bkgrd{
-                border: transparent $like-border-sz solid;
-                z-index: 3;
-                background: $like-hover-clr;
-                background-clip: border-box;
-                transform: rotate(45deg) scale(0);
-            }
+    }
+    &__top-lft{
+        border-right: unset;
+        left: -50%;
+        top: 0;
+        border-radius: 50% 0% 0 50%;
+        &__hover{
+            z-index: 5;
+            border: transparent $like-border-sz solid;
+            background: $like-hover-clr;
+            background-clip: border-box;
+            transform: scale(0);
+        }
+        &__hide-border{
+            z-index: 4;
+            border: transparent solid $like-border-sz;
+            background: $like-backgrd-clr;
+            background-clip: padding-box;
+        }
+    }  
+    &__btm{
+        border-top: unset;
+        border-left: unset;
+        width: $heart-size-elm-btm;
+        height: $heart-size-elm-btm;
+        right: 0%;
+        bottom: 0%;
+        &__hover{
+            z-index: 5;
+            border: unset;
+            background: -webkit-linear-gradient(
+                    135deg,
+                    $like-hover-clr-2nd,
+                    $like-hover-clr 50%
+                    );
+            transform: scale(0);
         }
     }
-    &__bottom{
-        top: 20%;
-        left: 20%;
-/*         z-index: 2; */
-        border-bottom: $like-border-clr $like-border-sz solid;
-        border-right: $like-border-clr $like-border-sz solid;
-        transform: rotate(45deg);
-        background: -moz-linear-gradient(
-                    135deg,
-                    $like-backgrd-clr 90%,
-                    transparent
-                    );    
-        &__bkgrd{
-            border: transparent $like-border-sz solid;
-/*             z-index: 3; */
-                background: $like-hover-clr;
-            background: -moz-linear-gradient(
-                /*         to right bottom,  */
-                        135deg,
-                        $color-secondary,
-                        $color-primary 50%
-                        );
-            background-clip: border-box;
-            transform: rotate(45deg) scaleY(0);
-        }                            
-    }
 }
 
-@keyframes fill-heart {
+@keyframes fill-heart-top-lft {
     0%{
         transform-origin: right;
-        transform:  
-        translate(-15%,35%)
-        rotate(45deg) 
-        scale(0); 
+        transform: scale(0); 
     }
     100%{
         transform-origin: right;
-        transform: 
-        translate(-15%,35%) 
-        rotate(45deg) 
-        scale(1);
+        transform: scale(1);
     }
 }
 
-@keyframes fill-heart-right {
+@keyframes fill-heart-top-rgt {
     0%{
         transform-origin: bottom;
-        transform: 
-        translate(-35%,-15%) 
-        rotate(45deg) 
-        scale(0); 
+        transform: scale(0); 
     }
     100%{
         transform-origin: bottom;
-        transform: 
-        
-        translate(-35%,-15%) 
-        rotate(45deg) 
-        scale(1);
+        transform: scale(1);
     }
 }
 
-@keyframes fill-heart-bottom {
+@keyframes fill-heart-btm {
     0%{
         transform-origin: center;
-        transform: 
-        rotate(45deg) 
-        scale(0);
+        transform: scale(0);
     }
     100%{
         transform-origin: center;
-        transform: 
-        rotate(45deg) 
-        scale(1);
+        transform: scale(1);
     }
 }

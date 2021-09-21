@@ -1,18 +1,11 @@
 $cards-border-radius: 1rem;
 
 .card{
-/*     width: 30rem; */
-/*     max-width: 370px; */
-/*     margin: auto; */
-/*     min-width: 20rem; */
-/*     max-width: 25rem; */
- /*    width: 25rem; */
     background: white;
     box-shadow: $box-shadow;
     border-radius: $cards-border-radius;
     &__img{
         position: relative;
-/*         min-width: 260px; */
         height: 14rem;
         max-height: 14rem;
         overflow: hidden;

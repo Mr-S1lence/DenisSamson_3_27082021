@@ -2,30 +2,25 @@
 
 @import "./utils/variables";
 @import "./utils/mixins";
-@import "./utils/animations";
 
 @import "./base/typography";
 @import "./base/base";
 
-@import "./components/loader";
 @import "./components/buttons";
-
-/* @import "./components/like";
-@import "./components/like2"; */
-@import "./components/like3";
-
-
+@import "./components/like";
 @import "./components/hourglass";
-@import "./utils/menu-choice";
-
 
 @import "./layout/bloc-page";
+
 @import "./layout/header";
-@import "./layout/location";
+@import "./layout/header-location";
 @import "./layout/nav";
-@import "./layout/container";
+
+@import "./layout/restaurants";
 @import "./components/cards";
-/* @import "./pages/menu"; */
+
+@import "./pages/menu";
+@import "./pages/menu-board.scss";
 
 @import "./layout/footer";
 

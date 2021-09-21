@@ -11,9 +11,9 @@
 body{
     font-family: roboto-regular;
     font-size: 4vw;
-@include media-min("mobile-down"){
-    font-size: unset;
-}
+    @include media-min("mobile-down"){
+        font-size: unset;
+    }
 
 }
 
@@ -38,11 +38,9 @@ a{
 }
 
 p{
-/*     font-size: 1.3rem; */
     font-size: 0.9rem;
 }
 
 span, .fas{
-/*     font-size: 1.1rem; */
     font-size: 0.9rem;
 }

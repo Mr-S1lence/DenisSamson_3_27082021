@@ -8,7 +8,6 @@
         justify-content: center;
         max-width: 12rem;    
         margin: auto;
-/*         margin-bottom: 1rem; */
         background: linear-gradient($color-secondary, $color-primary);
         color: white;
         &:hover{
@@ -26,21 +25,17 @@
     }
     &__functioning{
         margin-bottom: 1rem;
+        margin-left: 0.6rem;
         width: 100%;
         min-width: 90px;
-/*         max-width: 290px; */
         height: 4rem;
         border-radius: 1rem;
         @include media-min("mobile-down"){
             margin-bottom: 0;
-/*             margin-right: 1rem; */
-            height: 3rem;   
-/*             padding-right: 2%;    */    
+            height: 3rem;     
         }
         @include media-min("laptop"){
             margin-right: unset;
-        }
-        @include media-min("laptop-down"){
         }
         background: $color-background-elements;
         & .fas{
@@ -48,13 +43,10 @@
             text-align: center;
             min-width: 24px;
             color: $color-icon;
-/*             margin: 0 0.3rem 0 0.3rem; */
         }
         & div:nth-child(2n){
-
             margin: 0 5% 0 5%;
             @include media-min("mobile-down"){
-/*             background: red; */
             margin: 0;
             }
         }

@@ -28,18 +28,8 @@
         margin-bottom: 0;
         margin-top: 2rem;
     }
-/*     @include media-min("laptop"){
-        padding-left: 10.5rem;
-    }
-    @include media-min("laptop-down"){
-        padding-left: 22rem;
-    }
-    @include media-min("desktop"){
-        padding-left: 37rem;
-    } */
     height: 3rem;
     display: flex;
-
     & > div{
         display: flex;
     }

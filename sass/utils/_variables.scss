@@ -5,6 +5,7 @@ $color-background: #ffffff;
 $color-background-elements: #f6f6f6;
 $color-background-location: #eaeaea;
 $color-bkgrd-footer: #353535;
+$color-font-footer: white;
 $color-footer: white;
 $color-icon: #7e7e7e;
 $color-hover: #f5edff;
@@ -27,27 +28,5 @@ $breakpoints: (
 );
 
 
-@mixin media-min($key) {
-    @media screen and (min-width: map-get($breakpoints, $key)) {
-        &{ @content; }
-    }
-}
 
-@mixin media-min-px($key) {
-    @media screen and (min-width: $key ) {
-        &{ @content; }
-    }
-}
-
-@mixin media-min-max($key, $key2){
-    @media only screen and (min-width: map-get($breakpoints, $key)) and (max-width: map-get($breakpoints, $key) - 1){
-        &{ @content; }
-    }
-}
-
-@mixin media-min-height($key){
-    @media screen and ( height: $key ){
-        & { @content; }
-    }
-}
 

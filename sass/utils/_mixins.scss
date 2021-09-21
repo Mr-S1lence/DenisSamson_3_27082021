@@ -1,3 +1,27 @@
+@mixin media-min($key) {
+    @media screen and (min-width: map-get($breakpoints, $key)) {
+        &{ @content; }
+    }
+}
+
+@mixin media-min-px($key) {
+    @media screen and (min-width: $key ) {
+        &{ @content; }
+    }
+}
+
+@mixin media-min-max($key, $key2){
+    @media only screen and (min-width: map-get($breakpoints, $key)) and (max-width: map-get($breakpoints, $key) - 1){
+        &{ @content; }
+    }
+}
+
+@mixin media-min-height($key){
+    @media screen and ( height: $key ){
+        & { @content; }
+    }
+}
+
 
 @mixin padding-lft-rgt($key1){
     padding-left: $key1;
@@ -13,24 +37,19 @@
     @include padding-lft-rgt(1rem);
     @include media-min("mobile-down"){
         @include padding-lft-rgt(1rem);
-/*         background: yellow; */
     }
     @include media-min("tablet-down"){
         @include padding-lft-rgt(10%);
-/*         background: orange; */
     }
     @include media-min("laptop"){
         @include padding-lft-rgt(10%);
-/*                 background: red; */
     }
     @include media-min("laptop-down"){
         @include padding-lft-rgt(15%);
-/*         background: blue; */
         
     }
     @include media-min("desktop"){
         @include padding-lft-rgt(25%);
-/*         background: green; */
     }
 }
 

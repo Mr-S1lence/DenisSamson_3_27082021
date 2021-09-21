@@ -8,20 +8,17 @@ main{
     } 
 }
 
-.container{
+.restaurants{
     @include margin-content;
 }
 
-.container__grid{
+.restaurants__grid{
     display: grid;
     grid-template-columns: minmax(200px, 1fr);
     place-content: center;
     margin: auto;
     grid-gap: 2rem;
-
-/*     width: 100%; */
     margin-bottom: 3rem;
-
     @include media-min-px("610px"){
         grid-template-columns: 2fr 2fr;
         place-content: space-between;
