@@ -78,7 +78,6 @@ body {
 }
 .btn__functioning {
   margin-bottom: 1rem;
-  margin-left: 0.6rem;
   width: 100%;
   min-width: 90px;
   height: 4rem;
@@ -211,8 +210,8 @@ body {
 .heart__btm {
   border-top: unset;
   border-left: unset;
-  width: calc($heart-size-elm - $like-border-sz);
-  height: calc($heart-size-elm - $like-border-sz);
+  width: calc(1rem - 1px);
+  height: calc(1rem - 1px);
   right: 0%;
   bottom: 0%;
 }
@@ -712,6 +711,8 @@ body {
 }
 .functioning nav {
   display: grid;
+  padding-left: 0.6rem;
+  /*         margin-right: 0.6rem; */
   grid-template-columns: minmax(200px, 1fr);
   grid-gap: 1rem;
   margin: 0 0rem 0 0rem;
@@ -726,7 +727,7 @@ body {
     margin: 0 5rem 0rem 5rem;
   }
 }
-@media screen and (min-width: 610px) {
+@media screen and (min-width: 620px) {
   .functioning nav {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2rem;
@@ -798,7 +799,7 @@ main {
   grid-gap: 2rem;
   margin-bottom: 3rem;
 }
-@media screen and (min-width: 610px) {
+@media screen and (min-width: 620px) {
   .restaurants__grid {
     grid-template-columns: 2fr 2fr;
     place-content: space-between;

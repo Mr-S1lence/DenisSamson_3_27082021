@@ -6,7 +6,7 @@ $like-backgrd-clr: white;
 $like-border-clr : black;
 
 $heart-size-elm: math.div($heart-size, 2);
-$heart-size-elm-btm: calc($heart-size-elm - $like-border-sz);
+$heart-size-elm-btm: calc(#{$heart-size-elm} - #{$like-border-sz});
 
 .like-container{
     width: $heart-size;

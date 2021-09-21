@@ -19,7 +19,7 @@ main{
     margin: auto;
     grid-gap: 2rem;
     margin-bottom: 3rem;
-    @include media-min-px("610px"){
+    @include media-min-px("620px"){
         grid-template-columns: 2fr 2fr;
         place-content: space-between;
     }

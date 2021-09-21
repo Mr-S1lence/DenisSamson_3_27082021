@@ -6,10 +6,12 @@
     padding-bottom: 2rem;
     & nav{
         display: grid;
+        padding-left: 0.6rem;
+/*         margin-right: 0.6rem; */
         grid-template-columns: minmax(200px, 1fr);
         grid-gap: 1rem;
         @include margin-content;
-        @include media-min-px("610px"){
+        @include media-min-px("620px"){
             grid-template-columns: 1fr 1fr 1fr;
             grid-gap: 2rem;
         }
