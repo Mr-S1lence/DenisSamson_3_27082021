@@ -86,7 +86,8 @@ $heart-size-elm-btm: calc(#{$heart-size-elm} - #{$like-border-sz});
         &__hover{
             z-index: 5;
             border: unset;
-            background: -webkit-linear-gradient(
+            background-color: $like-hover-clr;
+            background-image: -webkit-linear-gradient(
                     135deg,
                     $like-hover-clr-2nd,
                     $like-hover-clr 50%
