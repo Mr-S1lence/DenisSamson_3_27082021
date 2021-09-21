@@ -5,7 +5,15 @@ $cards-border-radius: 1rem;
     box-shadow: $box-shadow;
     border-radius: $cards-border-radius;
     opacity: 0;
-    animation: cards-slide 0.5s 1.7s linear forwards;
+    animation: cards-slide 0.5s linear forwards;
+    $animation-delay: 1.7s;
+    animation-delay: $animation-delay;
+    @for $i from 1 through 9{
+        &:nth-child(#{$i}){
+            animation-delay: $animation-delay + $i * 150ms;
+        }
+    }
+
     &__img{
         position: relative;
         height: 14rem;
