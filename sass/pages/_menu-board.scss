@@ -32,7 +32,7 @@
         box-shadow: $box-shadow;
         opacity: 0;
         animation: sub-part-slide 0.5s 0s linear forwards;
-        @for $i from 1 through 5{
+        @for $i from 1 through 9{
             &:nth-child(#{$i}){
                 animation-delay: $i * 150ms;
             }
