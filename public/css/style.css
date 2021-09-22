@@ -1005,6 +1005,7 @@ main {
   align-items: center;
   font-family: "shrikhand-regular";
   font-size: 1.5rem;
+  letter-spacing: 1px;
   padding-right: 1rem;
 }
 @media screen and (min-width: 900px) {

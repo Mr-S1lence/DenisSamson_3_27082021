@@ -46,6 +46,7 @@
         align-items: center;
         font-family: 'shrikhand-regular';
         font-size: 1.5rem;
+        letter-spacing: 1px;
         padding-right: 1rem;
         @include media-min("tablet-down"){
             font-size: 1.8rem;
