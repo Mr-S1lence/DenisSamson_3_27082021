@@ -3,14 +3,14 @@
 @import "./utils/variables";
 @import "./utils/mixins";
 
-@import "./base/typography";
 @import "./base/base";
+@import "./base/typography";
+
+@import "./layout/bloc-page";
+@import "./components/hourglass";
 
 @import "./components/buttons";
 @import "./components/like";
-@import "./components/hourglass";
-
-@import "./layout/bloc-page";
 
 @import "./layout/header";
 @import "./layout/header-location";
