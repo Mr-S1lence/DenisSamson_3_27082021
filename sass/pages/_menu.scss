@@ -32,7 +32,7 @@
 
 .menu{
     background: $color-background-elements;
-    margin-top: 13rem;
+    margin-top: 11rem;
     border-top-right-radius: 2rem;
     border-top-left-radius: 2rem;
     padding: 1rem 0.5rem;
@@ -47,7 +47,7 @@
         font-family: 'shrikhand-regular';
         font-size: 1.5rem;
         letter-spacing: 1px;
-        padding-right: 1rem;
+/*         padding-right: 1rem; */
         @include media-min("tablet-down"){
             font-size: 1.8rem;
             padding-right: 0;

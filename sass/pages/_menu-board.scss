@@ -4,7 +4,7 @@
 
 .menu-board{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(200px,1fr);
     grid-gap: 2rem;
     margin: 2rem 0 2rem 0;
     @include media-min("mobile-down"){
@@ -24,7 +24,8 @@
         background: #99e2d0;
     }
     &__subpart{
-        width: 21rem;
+/*         width: 21rem; */
+        width: 100%;
         margin: auto;
         @include media-min("mobile-down"){
             width: unset;
