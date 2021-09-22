@@ -174,6 +174,9 @@ body {
   border: solid 1px black;
   background: white;
 }
+.heart--menu {
+  background: #f6f6f6;
+}
 .heart__top-rgt {
   z-index: 3;
   border-bottom: unset;
@@ -205,6 +208,10 @@ body {
   z-index: 4;
   border: transparent solid 1px;
   background: white;
+  background-clip: padding-box;
+}
+.heart__top-lft__hide-border--menu {
+  background: #f6f6f6;
   background-clip: padding-box;
 }
 .heart__btm {

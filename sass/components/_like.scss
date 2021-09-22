@@ -43,6 +43,9 @@ $heart-size-elm-btm: calc(#{$heart-size-elm} - #{$like-border-sz});
     height: $heart-size-elm;
     border: solid $like-border-sz $like-border-clr;
     background: $like-backgrd-clr;
+    &--menu{
+        background: $color-background-elements;
+    }
     &__top-rgt{
         z-index: 3;
         border-bottom: unset;
@@ -73,6 +76,10 @@ $heart-size-elm-btm: calc(#{$heart-size-elm} - #{$like-border-sz});
             z-index: 4;
             border: transparent solid $like-border-sz;
             background: $like-backgrd-clr;
+            &--menu{
+                background: $color-background-elements;
+                background-clip: padding-box;
+            }
             background-clip: padding-box;
         }
     }  
