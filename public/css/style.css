@@ -322,7 +322,7 @@ span, .fas {
   color: #7e7e7e;
 }
 .btn__functioning div:nth-child(2n) {
-  margin: 0 5% 0 5%;
+  margin: 0 2% 0 2%;
 }
 @media screen and (min-width: 500px) {
   .btn__functioning div:nth-child(2n) {
