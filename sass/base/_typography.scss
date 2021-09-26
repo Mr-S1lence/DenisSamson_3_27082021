@@ -13,7 +13,7 @@
 }
 
 body{
-    font-family: roboto-regular;
+    font-family: roboto-regular, 'Arial Black', Impact, serif;
     font-size: 4vw;
     @include media-min("mobile-down"){
         font-size: unset;

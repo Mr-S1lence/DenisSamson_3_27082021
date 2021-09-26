@@ -19,8 +19,12 @@ $cards-border-radius: 1rem;
 
     &__img{
         position: relative;
-        height: 14rem;
-        max-height: 14rem;
+        height: 11rem;
+        max-height: 11rem;
+        @include media-min("mobile-down"){
+            height: 14rem;
+            max-height: 14rem;
+        }
         overflow: hidden;
         border-top-left-radius: $cards-border-radius;
         border-top-right-radius: $cards-border-radius;
@@ -28,7 +32,8 @@ $cards-border-radius: 1rem;
             position: absolute;
             top: -25%;
             width: 100%;
-            height: 110%;
+/*             height: 110%; */
+            height: 125%;
             object-fit: cover;
             transition: transform .9s;
             @include media-min("mobile-down"){
@@ -60,7 +65,7 @@ $cards-border-radius: 1rem;
     &__legend{
         display: flex;
         justify-content: space-between;
-        margin-top: -1rem;
+        margin-top: 1rem;
         padding: 0 1rem 0 1rem;
         font-size:1.3rem;
         @include media-min("mobile-down"){
