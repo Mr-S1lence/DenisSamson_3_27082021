@@ -910,12 +910,14 @@ main {
     height: 125%;
   }
 }
-.card:hover img {
-  -ms-transform: scale(1.1);
-  /* IE 9 */
-  -webkit-transform: scale(1.1);
-  /* Safari 3-8 */
-  transform: scale(1.1);
+@media screen and (min-width: 1024px) {
+  .card:hover img {
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari 3-8 */
+    transform: scale(1.1);
+  }
 }
 .card__new-label {
   position: absolute;

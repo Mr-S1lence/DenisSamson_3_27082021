@@ -42,9 +42,11 @@ $cards-border-radius: 1rem;
         }
     }
     &:hover img{
+        @include media-min("laptop"){
         -ms-transform: scale(1.1); /* IE 9 */
         -webkit-transform: scale(1.1); /* Safari 3-8 */
-        transform: scale(1.1);            
+        transform: scale(1.1);     
+        }       
     }
     &__new-label{
         position: absolute;
